@@ -1,9 +1,11 @@
 import React from "react";
+import Googlebtn from "../Components/Googlebtn";
 function Login(){
     return(
         <div>
             <h1>login page</h1>
-            <button>구글로 시작하기</button>
+             
+            <Googlebtn />
         </div>
     )
 }
