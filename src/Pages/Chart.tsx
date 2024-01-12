@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBar from "../Components/NavigationBar";
 
-function Dashboard(){
+function Chart(){
     return(
         <div>
         <NavigationBar menuItems={[
@@ -10,10 +10,10 @@ function Dashboard(){
           { name: 'Mypage', link: '/mypage' },
         ]}/>
         <div className="DashContainer">
-        <h1 style={{marginTop:100}}>This is Dashboard Page</h1>
+        <h1 style={{marginTop:100}}>This is Chart Page</h1>
         </div>
             
         </div>
     )
 }
-export default Dashboard;
+export default Chart;

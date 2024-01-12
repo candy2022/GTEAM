@@ -1,26 +1,26 @@
-import React from "react";
-import Googlebtn from "../Components/Googlebtn";
-import "../Styles/Login.css";
+import React  from "react";
+ import "../Styles/Login.css";
+import Footer from "../Components/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import NavigationBar from "../Components/NavigationBar";
+
 function Login(){
+  
     return(
          <>
-    <div id="wrap">
-    <header>
-      <a className="logo" href="#home"> <img src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="logoimg" /></a>
-      <nav>
-        <ul className="nav-items">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-         <li><Googlebtn /></li> 
-        </ul>
-      </nav>
-    </header>
-    <div id="content-wrap">       
+    <div className="wrap">
+ 
+    <NavigationBar menuItems={[
+          { name: 'Home', link: '#home' },
+          { name: 'About', link: '#about' },
+          { name: 'Contact', link: '#contact' },
+        ]}/>
+    <div className="content-wrap">       
       <section>
         <article id="home">
+          
+          <br />
            <h1>With <span style={{color: "#5931eb"}}>NeatFin</span> <br />
             gain a clear overview of your expenses and income,<br />
              and achieve a better financial status<br />
@@ -39,7 +39,9 @@ function Login(){
             </h3> 
             </article>
         <article id="about">
+          <br />
           <h1>About</h1>
+          <hr />
            <h2>Take a look at NeatFin's main features.</h2>
            <div className="container">
          <div className="text1">
@@ -73,6 +75,7 @@ Exchange valuable tips on financial management and share experiences with others
            </article>        
         <article id="contact">           
           <h1>Contact</h1>
+          <hr />
           <h2>Please ask any questions you may have when using NeatFin.</h2>
           <a href="https://github.com/Neat-Fin" className="github-button" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
@@ -81,7 +84,7 @@ Exchange valuable tips on financial management and share experiences with others
            </article>
       </section>     
     </div>
-    <footer>© Copyright 2024 Neatfin</footer> 
+    <Footer />
   </div>
     </>
     )
