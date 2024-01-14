@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBar from "../Components/NavigationBar";
+import PieChartcomponent from "../Components/PieChart";
 
 function Chart(){
     return(
@@ -12,7 +13,7 @@ function Chart(){
         <div className="DashContainer">
         <h1 style={{marginTop:100}}>This is Chart Page</h1>
         </div>
-            
+            <PieChartcomponent />
         </div>
     )
 }
