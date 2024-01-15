@@ -32,7 +32,7 @@ nav { float: right; }
       color: #000;
        
 }
-.nav-items > li > a:hover {
+.nav-items > li:hover {
     background-color: #5931eb60;
 }
 @media only screen and (max-width: 800px) {

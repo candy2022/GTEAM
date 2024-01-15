@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import NavigationBar from "../Components/NavigationBar";
-
+import Googlebtn from "../Components/Googlebtn";
 function Login(){
   
     return(
@@ -14,6 +14,7 @@ function Login(){
     <NavigationBar menuItems={[
           { name: 'Home', link: '#home' },
           { name: 'About', link: '#about' },
+          { name: 'Service', link:'#service'          },
           { name: 'Contact', link: '#contact' },
         ]}/>
     <div className="content-wrap">       
@@ -26,22 +27,25 @@ function Login(){
              and achieve a better financial status<br />
             
            </h1>
-           <img className="img1" src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="img" />
-           <h3>            
-            Ease your concerns about your finances. <br />
+           <h3 style={{color: "#555" , lineHeight:"2"}}>            
+            Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
-            We are here to assist you in experiencing a more joyful financial state. <br />
+            We are here to assist you in experiencing a more joyful financial state.  
             Discover the path to financial well-being with our user-friendly tools and personalized guidance. <br />
             Take control of your money, plan for your goals, and enjoy the peace of mind that comes with Neatfin's financial solutions.
             Your success is our priority,
             and we're dedicated to supporting you every step of the way.
 
             </h3> 
+            <Googlebtn />
+
+            <img className="img1" src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="img" />
+
             </article>
         <article id="about">
           <br />
           <h1>About</h1>
-          <hr />
+          
            <h2>Take a look at NeatFin's main features.</h2>
            <div className="container">
          <div className="text1">
@@ -72,10 +76,35 @@ Exchange valuable tips on financial management and share experiences with others
             </p>
          </div>
         </div>
-           </article>        
+        </article>       
+          
+        <article id="service">          
+          <h1>Our Service</h1>          
+          <div className="container2">
+         <div className="text1">
+         <h3 style={{color: "#555"}}>Take control of your finances</h3>
+           <h2>Gain a Clear Overview of Your Finances.</h2>
+           <br />
+          <hr />
+          <br />
+           <h3> Expense Tracking</h3>
+           <h3 style={{color: "#555"}}>          
+           Easily track your expenses and categorize them to understand where your money is going.
+           </h3>
+           <h3>Income Management</h3>
+           <h3 style={{color: "#555"}}>           
+           Keep track of your income sources and monitor your earnings to achieve your financial goals.
+           </h3>
+         </div>
+        <div className="text2">           
+        <img className="img2" src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="img" />
+
+         </div>
+        </div>
+           </article>      
         <article id="contact">           
           <h1>Contact</h1>
-          <hr />
+          
           <h2>Please ask any questions you may have when using NeatFin.</h2>
           <a href="https://github.com/Neat-Fin" className="github-button" target="_blank">
           <FontAwesomeIcon icon={faGithub} />

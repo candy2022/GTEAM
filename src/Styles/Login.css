@@ -28,13 +28,25 @@ article {
     align-items: center;
     height: 100vh;
 }
+.img2 {  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    border: 1px solid;
+}
 .container {
        display: flex; width: 100%; 
        padding: 2vh;
        border-radius: 5px;
        border: 1px solid #5931eb60;
-       
-}      
+       line-height: 30px;
+
+} 
+.container2{
+    display: flex; width: 100%; 
+    padding: 4vh 0;
+    line-height: 30px;
+}     
 .text1 {
         flex: 1; /* 왼쪽 절반을 차지하도록 설정 */
         padding: 1vw;
