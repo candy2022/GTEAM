@@ -1,6 +1,10 @@
 h1, h2, h3, p {
 margin: 1vw 0.5vw;
 }
+hr{
+    border: 1px dashed lightgray;
+     
+}
 p{color: #555;}
 h1 { font-size: 3em; }
 .wrap {
@@ -74,6 +78,12 @@ article {
 .github-icon {
     margin-right: 10px; 
 }
+.contactbox{
+    line-height: 40px;
+}
+.contactbox h3 span{
+    color: gray;
+}
 @media only screen and (max-width: 800px) {
     
     h1{
@@ -98,6 +108,10 @@ article {
         border: 1px solid red;
     }
     .container{
+        flex-direction: column; /* 모바일 화면에서는 세로로 배치 */
+        width: 92%; 
+    }
+    .container2{
         flex-direction: column; /* 모바일 화면에서는 세로로 배치 */
     }
    

@@ -24,10 +24,10 @@ function Login(){
           <br />
            <h1>With <span style={{color: "#5931eb"}}>NeatFin</span> <br />
             gain a clear overview of your expenses and income,<br />
-             and achieve a better financial status<br />
+             and achieve a better financial status
             
            </h1>
-           <h3 style={{color: "#555" , lineHeight:"2"}}>            
+           <h3 style={{color: "#555"}}>            
             Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
             We are here to assist you in experiencing a more joyful financial state.  
@@ -103,13 +103,30 @@ Exchange valuable tips on financial management and share experiences with others
         </div>
            </article>      
         <article id="contact">           
-          <h1>Contact</h1>
           
-          <h2>Please ask any questions you may have when using NeatFin.</h2>
+          <h2>Frequently Asked Questions</h2>
+          <div className="contactbox">
+          <h3>
+          <hr />
+          Is my data secure? <br />          
+          <span>Absolutely. We prioritize the security and privacy of your data. 
+            All your financial information is encrypted and stored securely.</span>
+          <br /><hr />
+            Can I access the Financial Tracker on my mobile device? <br />
+          <span>Yes, the Financial Tracker is available on both desktop and mobile devices.
+           You can track your finances anytime, anywhere.</span>
+          <hr />
+          </h3>
+          <br />
+          
+          <h2>Contact <br /> 
+            Please ask any questions you may have when using NeatFin.</h2>
           <a href="https://github.com/Neat-Fin" className="github-button" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
              Visit Github
             </a>
+          </div>
+          
            </article>
       </section>     
     </div>
