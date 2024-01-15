@@ -25,17 +25,19 @@ nav { float: right; }
 }
 .nav-items > li {
       display: inline-block;   
+     font-size: 1.5em;
 }
 .nav-items > li > a {      
       line-height: 5vh;
-      padding: 2vh 5vw; /* 위아래, 좌우  */
+      padding: 2vh 3.5vw; /* 위아래, 좌우  */
       color: #000;
        
 }
 .nav-items > li:hover {
     background-color: #5931eb60;
 }
-@media only screen and (max-width: 800px) {
+ 
+@media only screen and (max-width: 860px) {
     header {
        
        padding: auto; /* 모바일 화면에서 header의 높이를 자동으로 조정 */
@@ -62,10 +64,7 @@ nav { float: right; }
       font-size: 1.5em;
       margin: 3vh;
     }
-     
-    .mobile-menu-icon{
-        display: block;
-    }
+    
     .mobile-menu-icon:checked ~ .nav-items {
       display: block;
       width: 100%;
@@ -79,13 +78,17 @@ nav { float: right; }
     .mobile-menu-icon {
       display: block;
       cursor: pointer;
-      padding: 3vh 6vw;
-      margin: 0 30px;
+      padding: 2.5vh 5vw;
+      margin: 1px 30px;
       border: 1px solid white;
     }
     .mobile-menu-icon:hover{
         border: 1px solid #5931eb60;
         border-radius: 5px;
+                
+    }
+    .mobile-menu-icon:active{
+      background-color: #5931eb3f;
     }
     .bar {
       width: 30px;
