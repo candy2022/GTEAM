@@ -1,22 +1,14 @@
-import { GoogleLogin } from '@react-oauth/google';
+import React from 'react';
+import { GoogleLogin ,CredentialResponse} from '@react-oauth/google';
 import { GoogleOAuthProvider } from '@react-oauth/google';
-interface GoogleLoginResponse {
-    // Google OAuth에서 반환되는 필드들
-    sub: string;
-    name: string; 
-    given_name: string;
-    family_name: string;
-    picture: string;
-    email: string;
-    email_verified: boolean;
-    locale: string;
-    
-    // ... 기타 필드들 ...
-  }
+import { useNavigate } from 'react-router-dom'; // useHistory 추가
+
 const Googlebtn = () => {
-    const sendToServer = (credentialResponse: GoogleLoginResponse ) => {
+  const navigate = useNavigate(); // useHistory 훅 사용
+
+    const sendToServer = (credentialResponse: CredentialResponse ) => {
         // credentialResponse를 서버로 전송
-        fetch('/api/oauth2/callback/google', {
+        fetch('http://localhost:8080/api/oauth2/callback/google', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -36,10 +28,14 @@ const Googlebtn = () => {
     <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID}>
         
       <GoogleLogin
-        onSuccess={(credentialResponse: GoogleLoginResponse) => {
+        onSuccess={(credentialResponse: CredentialResponse) => {
           console.log(credentialResponse);
           //서버에 전송
           sendToServer(credentialResponse);
+          
+          // Google 로그인 성공 후 대시보드 페이지로 이동
+          navigate('/dashboard');
+
         }}
         onError={() => {
           console.log('Login Failed');
