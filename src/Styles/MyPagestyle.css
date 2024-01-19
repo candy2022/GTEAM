@@ -2,23 +2,21 @@
     width: 20vw;
     height: 100vw;
     padding: 10px;
-    background-color: lavender;
+    
 }
   
 .mybtn {
     width: 100%;
     padding: 1vmax;
     margin-bottom: 3vh;
-    text-align: left;
-    border: 1px solid #5931eb60;
-    background-color: lavender;
+    text-align: left; 
+    background-color: #fff;
     font-weight: bold;
     font-size: 1em;
     text-align: center;
 }
-.mybtn:hover{
-    background-color:  #5931eb60;
-    color: white;
+.mybtn:hover{  
+   background-color: #eee;
 }
  
 .myContainer{
