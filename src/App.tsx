@@ -5,7 +5,7 @@ import Dashboard from './Pages/Dashboard';
 import Googlebtn from './Components/Googlebtn';
 import Mypage from './Pages/MyPage';
 import Chart from './Pages/Chart';
-
+import MoneyInput from './Pages/MoneyInput';
 function App() { 
 
   return (
@@ -17,6 +17,7 @@ function App() {
       <Route path={"/googlebtn"} element={<Googlebtn />}></Route> 
       <Route path={"/mypage"} element={<Mypage />}></Route> 
       <Route path={"/chart"} element={<Chart />}></Route> 
+      <Route path={"/moneyinput"} element={<MoneyInput />}></Route> 
 
      </Routes>          
    </BrowserRouter>

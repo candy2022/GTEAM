@@ -8,6 +8,8 @@ function Dashboard(){
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
+          { name: 'input', link: '/moneyinput'},
+
         ]}/>
         <div className="DashContainer">
         <h1 style={{marginTop:100}}>This is Dashboard Page</h1>

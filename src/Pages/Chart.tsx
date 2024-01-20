@@ -10,6 +10,7 @@ function Chart() {
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
+          { name: 'input', link: '/moneyinput'}
         ]}
       />
       <div className="DashContainer">
