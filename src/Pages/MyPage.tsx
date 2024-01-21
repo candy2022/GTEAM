@@ -26,7 +26,7 @@ function Mypage(){
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
-          { name: 'input', link: '/moneyinput'},
+          { name: 'input', link: '/moneybook'},
 
         ]}/>
         <div className="myContainer" >

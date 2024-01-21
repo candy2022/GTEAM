@@ -6,6 +6,9 @@ import Googlebtn from './Components/Googlebtn';
 import Mypage from './Pages/MyPage';
 import Chart from './Pages/Chart';
 import MoneyInput from './Pages/MoneyInput';
+import MoneyBook from './Pages/MoneyBook';
+import PhotoiInput from './Pages/PhotoInput';
+
 function App() { 
 
   return (
@@ -17,7 +20,9 @@ function App() {
       <Route path={"/googlebtn"} element={<Googlebtn />}></Route> 
       <Route path={"/mypage"} element={<Mypage />}></Route> 
       <Route path={"/chart"} element={<Chart />}></Route> 
-      <Route path={"/moneyinput"} element={<MoneyInput />}></Route> 
+      <Route path={"moneybook/moneyinput"} element={<MoneyInput />}></Route> 
+      <Route path={"moneybook/photoinput"} element={<PhotoiInput />}></Route> 
+      <Route path={"/moneybook"} element={<MoneyBook />}></Route> 
 
      </Routes>          
    </BrowserRouter>
