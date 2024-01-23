@@ -51,9 +51,9 @@ const PieChartcomponent =() => {
     return (
       <div>
        
-      <ResponsiveContainer  width="100%" height={500} minWidth={400} minHeight={350} >
-        <PieChart width={400} height={400}>
-        <Legend  wrapperStyle={{ top: 0, left: 0, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '30px' }} />
+      <ResponsiveContainer  width="100%" height={500} minWidth={300} minHeight={300} >
+        <PieChart >
+        <Legend  wrapperStyle={{ top: 0, left: 0, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '25px' }} />
 
           <Pie
             data={finalData}
@@ -61,11 +61,11 @@ const PieChartcomponent =() => {
             cy="50%"
             labelLine={false}
             label={renderCustomizedLabel}
-            outerRadius={80}
+            outerRadius={100}
             fill="#8884d8"
             dataKey="value"
           >
-            {data.map((entry, index) => (
+            {finalData.map((entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>

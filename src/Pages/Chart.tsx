@@ -14,8 +14,8 @@ function Chart() {
         ]}
       />
       <div className="DashContainer">
-        <h1> Check out this month's spending chart!    </h1>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <h2> Check out this month's spending chart!  </h2>
+        <div className="pieContainer" >
           <PieChartComponent />
         </div>
         <div>
