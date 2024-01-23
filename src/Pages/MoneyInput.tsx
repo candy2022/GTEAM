@@ -23,9 +23,8 @@ function MoneyInput() {
         ]}
       />
        <div className="inputContainer">
-        <button className="moneybtn">
-        <Link to="/moneybook"> &lt;</Link>
-        </button>
+       <Link to="/moneybook"><button className='backbtn' >&lt;</button> </Link>
+
         <br />
       <button className="moneybtn income" onClick={() => handleButtonClick("income")}>Income</button>
       <button className="moneybtn expense" onClick={() => handleButtonClick("expense")}>Expense</button>

@@ -1,5 +1,8 @@
 .inputContainer{
     margin-top: 13vh;
+    margin-left: 5%;
+    margin-right: 5%;
+  
 }
 .transContainer{
     display: flex;
@@ -8,12 +11,24 @@
     min-height: 100vh; 
 
 }
+.uploadbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh; 
+    border: 2px dashed gray ;    
+    margin: 5% 10%;
+    text-align: center;
+    padding: 3%;
+
+}
 .moneybtn{
     padding:2vh 3vw; /*위아래 좌우*/
     border: none;
     color: #fff;
     font-weight: bold;
     margin: 2vh 1vw;
+ 
 }
 .moneybtn:hover{
  cursor: pointer;
@@ -25,4 +40,27 @@
 }
 .expense{
     background-color: cornflowerblue;
+}
+.backbtn{
+    border: none;
+    font-size: 2em;
+    background-color: #fff;
+    padding:1vh 1vw;
+}
+.backbtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(214, 188, 210, 0.591);  
+   
+}
+.sulmung{
+    text-align: center;
+    padding: 1%;
+    text-rendering: geometricPrecision;
+    color: gray;
+}
+@media only screen and (max-width: 400px) {
+    .uploadbox{
+        font-size: small;        
+    
+    }
 }
