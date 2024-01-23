@@ -33,7 +33,7 @@ function Mypage(){
         <div>
         <div style={{ display: 'flex' }}>
         <div className='myaside'>
-        <h1>MyPage</h1>
+        <h2>MyPage</h2>
         <button className="mybtn" onClick={() => setCurrentPage('information')}>계정정보</button>
         <button  className="mybtn" onClick={() => setCurrentPage('settings')}>설정</button> 
         <button  className="mybtn" onClick={() => setCurrentPage('posts')}>작성한 게시글</button>

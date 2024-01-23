@@ -25,7 +25,7 @@ nav { float: right; }
 }
 .nav-items > li {
       display: inline-block;   
-     font-size: 1.5em;
+     font-size: 1.3em;
 }
 .nav-items > li > a {      
       line-height: 5vh;
@@ -34,10 +34,11 @@ nav { float: right; }
        
 }
 .nav-items > li:hover {
-    background-color: #5931eb60;
+  box-shadow: 0 0 10px #b5a4f460;  
+
 }
  
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 905px) {
     header {
        
        padding: auto; /* 모바일 화면에서 header의 높이를 자동으로 조정 */

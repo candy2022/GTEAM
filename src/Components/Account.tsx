@@ -3,7 +3,9 @@ import "../Styles/Accountstyle.css";
 function Account(){
     return(
        <div>
+        <div className='mypageheader'>
         <h3>Account</h3>
+      </div>
         <hr />
         <form action = " " className="AccountContainer">
         <h3>NeatFin에서 나를 표현하고 NeatFin을 보는 방식을 선택하세요</h3>

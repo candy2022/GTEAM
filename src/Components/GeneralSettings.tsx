@@ -1,8 +1,8 @@
 import React from 'react';
 function GeneralSettings(){
     return(
-        <div>
-            <h2>일반 설정</h2>
+        <div className='mypageheader'>
+            <h3>일반 설정</h3>
         </div>
     )
 }

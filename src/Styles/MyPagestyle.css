@@ -3,10 +3,9 @@
     height: 100vw;
     padding: 10px;
     
-}
-  
+}  
 .mybtn {
-    width: 100%;
+    width: 80%;
     padding: 1vmax;
     margin-bottom: 3vh;
     text-align: left; 
@@ -14,11 +13,43 @@
     font-weight: bold;
     font-size: 1em;
     text-align: center;
+    border: 1px solid gray;
 }
 .mybtn:hover{  
    background-color: #eee;
 }
+.categorybox{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 1vh;
+   
+}
+.postbox{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10vh 2vw;
+    margin: 1vh;
+}
  
 .myContainer{
     margin-top: 12vh;
+}
+.mypageheader{
+    background-color: #303536;
+    color: #fff;
+    padding: 1vh;
+}
+.postcategorybtn{
+    background-color: #fff;
+    padding: 2vh 2vw;
+    color: gray;
+    border: 2px solid #fff;
+}
+.postcategorybtn:hover{
+    cursor: pointer;
+    color: #111;
+}
+.postcategorybtn:active{
+    border-bottom: 2px solid black;
+
 }
