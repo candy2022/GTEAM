@@ -1,7 +1,8 @@
 import React from "react";
 import "../Styles/Accountstyle.css";
-function Account(){
-    return(
+
+function Account() {
+  return(
        <div>
         <div className='mypageheader'>
         <h3>Account</h3>
@@ -11,6 +12,7 @@ function Account(){
         <h3>NeatFin에서 나를 표현하고 NeatFin을 보는 방식을 선택하세요</h3>
         <hr />
         <h3>프로필 이미지</h3>
+        <h2>사용자 정보</h2>
         <img className="profileimg" src="https://cdn.inflearn.com/public/main/profile/default_profile.png" alt="googleaccountimg" />
         <button className="Accountimgbtn">변경</button>
         <p>확장자: png, jpg, jpeg/ 용량: 1MB 이하</p>
