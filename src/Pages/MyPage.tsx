@@ -34,10 +34,10 @@ function Mypage(){
         <div style={{ display: 'flex' }}>
         <div className='myaside'>
         <h2>MyPage</h2>
-        <button className="mybtn" onClick={() => setCurrentPage('information')}>계정정보</button>
-        <button  className="mybtn" onClick={() => setCurrentPage('settings')}>설정</button> 
-        <button  className="mybtn" onClick={() => setCurrentPage('posts')}>작성한 게시글</button>
-       
+        <button className="mybtn" onClick={() => setCurrentPage('information')}>Account</button>
+        <button  className="mybtn" onClick={() => setCurrentPage('posts')}>Posts</button>
+        <button  className="mybtn" onClick={() => setCurrentPage('settings')}>Help Center</button> 
+
         </div>             
         <div style={{ flex: 1, padding: '10px' }}>
           {renderPage()}

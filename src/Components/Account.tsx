@@ -1,39 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import "../Styles/Accountstyle.css";
-
+interface UserInfo {
+  email: string;
+  name: string;
+  picture: string;
+}
 function Account() {
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+
+  useEffect(() => {
+    // 세션 스토리지에서 정보 읽어오기
+    const storedEmail = sessionStorage.getItem('email');
+    const storedName = sessionStorage.getItem('name');
+    const storedPicture = sessionStorage.getItem('picture');
+
+    if (storedEmail && storedName && storedPicture) {
+      const userObj: UserInfo = {
+        email: storedEmail,
+        name: storedName,
+        picture: storedPicture,
+      };
+      setUserInfo(userObj);
+    }
+  }, []);  
+
   return(
        <div>
         <div className='mypageheader'>
-        <h3>Account</h3>
+        <h3>Edit profile</h3>
       </div>
         <hr />
+        {userInfo ? (
+        <div>                
         <form action = " " className="AccountContainer">
-        <h3>NeatFin에서 나를 표현하고 NeatFin을 보는 방식을 선택하세요</h3>
         <hr />
-        <h3>프로필 이미지</h3>
-        <h2>사용자 정보</h2>
-        <img className="profileimg" src="https://cdn.inflearn.com/public/main/profile/default_profile.png" alt="googleaccountimg" />
-        <button className="Accountimgbtn">변경</button>
-        <p>확장자: png, jpg, jpeg/ 용량: 1MB 이하</p>
-        <h3>닉네임</h3>
-        <p>한글, 영문(대소문자), 숫자 조합 /2 - 18자 이하</p>
-        <input className="nickinput" type="text" />
-        <h3>자기소개</h3>
+        <h2>{userInfo.name} 's information</h2>
+        <img className="profileimg" src={userInfo.picture} alt="googleaccountimg" />
+        <h3>UserName</h3>
+        <input className="nickinput" type="text" placeholder={userInfo.name} />
+        <h3>Pronouns</h3>
         <textarea id="myTextArea" rows={5} cols={50}></textarea>
         <br />
-        <button className="savebtn">저장하기</button>
+        <button className="savebtn">submit</button>
         </form>
         <div className="AccountContainer">
-            <h3>이메일</h3>
-            <input className="nickinput" type="text" />
-            <button className="savebtn">저장하기</button>
-
+            <h3>Email</h3>
+            <div className="nickinput" >{userInfo.email}</div> 
+            <p>Managed by Google</p>
         </div>
         <div className="AccountContainer">
-        <h3>탈퇴</h3>
+        <h3>Delete account</h3> <button>Delete</button>
         </div>
-        
+        </div>
+      ) : (
+        <p>No user information available.</p>
+      )}
        </div>
 
 
