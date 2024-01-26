@@ -1,6 +1,8 @@
 import React from "react";
 import NavigationBar from "../Components/NavigationBar";
 import PieChartComponent from "../Components/PieChart";
+import Footer from "../Components/Footer";
+
 import '../Styles/Chartstyle.css';
 function Chart() {
   return (
@@ -10,7 +12,7 @@ function Chart() {
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
-          { name: 'input', link: '/moneybook'}
+          { name: 'Moneybook', link: '/moneybook'}
         ]}
       />
       <div className="DashContainer">
@@ -34,6 +36,7 @@ function Chart() {
             <a href="/dashboard">Dashboard</a> page.
           </p>
         </div>
+        <Footer />
       </div>
     </div>
   );

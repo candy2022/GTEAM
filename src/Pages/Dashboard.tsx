@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBar from "../Components/NavigationBar";
+import Footer from "../Components/Footer";
 
 function Dashboard(){
     return(
@@ -8,13 +9,13 @@ function Dashboard(){
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
-          { name: 'input', link: '/moneybook'},
+          { name: 'Moneybook', link: '/moneybook'},
 
         ]}/>
         <div className="DashContainer">
         <h1 style={{marginTop:100}}>This is Dashboard Page</h1>
         </div>
-            
+            <Footer />
         </div>
     )
 }

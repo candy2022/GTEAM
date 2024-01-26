@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'; 
-
+import "../Styles/inputstyle.css"
 type TransactionType = "expense" | "income";
 
 interface TransactionInputProps {
@@ -31,12 +31,13 @@ const TransactionInput: React.FC<TransactionInputProps> = ({ type }) => {
 
   return (
     <div>
-      <h2>{type === "expense" ? "Expense" : "Income"} Input Page</h2>
+      <h2 className="title">{type === "expense" ? "Expense" : "Income"} Input Page</h2>
       <div className="moneyContainer">
         <form onSubmit={handleTransactionSubmit}>
         <label>
             Date:
             <input
+              className="inputField"
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
@@ -45,7 +46,7 @@ const TransactionInput: React.FC<TransactionInputProps> = ({ type }) => {
           <br />
           <label>
             Category:
-            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+            <select className="selectField" value={category} onChange={(e) => setCategory(e.target.value)}>
               <option value="">Select a category</option>
               {type === "expense" ? (
                 <>
@@ -66,6 +67,7 @@ const TransactionInput: React.FC<TransactionInputProps> = ({ type }) => {
           <label>
             Amount:
             <input
+             className="inputField"
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}

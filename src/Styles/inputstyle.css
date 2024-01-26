@@ -58,6 +58,23 @@
     text-rendering: geometricPrecision;
     color: gray;
 }
+.title {
+    color: #333;
+}
+  
+.moneyContainer {
+    max-width: 30vw;
+    margin: 0 auto;
+}
+  
+.inputField,
+.selectField {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+  
 @media only screen and (max-width: 400px) {
     .uploadbox{
         font-size: small;        

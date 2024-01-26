@@ -10,7 +10,7 @@ function PhotoiInput(){
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
-          { name: 'input', link: '/moneybook'},
+          { name: 'Moneybook', link: '/moneybook'},
         ]}
       />
         <div className="inputContainer">

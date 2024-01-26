@@ -3,6 +3,8 @@ import Account from '../Components/Account';
 import GeneralSettings from '../Components/GeneralSettings';
 import MyPosts from '../Components/MyPosts';
 import NavigationBar from "../Components/NavigationBar";
+import Footer from "../Components/Footer";
+
 import '../Styles/MyPagestyle.css';
 function Mypage(){
     const [currentPage, setCurrentPage] = useState<'information' | 'settings' | 'posts'>();
@@ -26,7 +28,7 @@ function Mypage(){
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
           { name: 'Mypage', link: '/mypage' },
-          { name: 'input', link: '/moneybook'},
+          { name: 'Moneybook', link: '/moneybook'},
 
         ]}/>
         <div className="myContainer" >
@@ -44,6 +46,7 @@ function Mypage(){
         </div>
       </div>
     </div>
+    <Footer />
     </div>
     </div>
     )
