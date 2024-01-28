@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import NavigationBar from "../Components/NavigationBar";
 import Footer from "../Components/Footer";
-
+import "../Styles/Dashstyle.css"
+interface UserInfo {     
+    name: string;
+    
+  }
 function Dashboard(){
+    const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+    useEffect(() => {
+        
+        const storedName = sessionStorage.getItem('name');
+     
+        if ( storedName ) {
+          const userObj: UserInfo = {            
+            name: storedName,            
+          };
+          setUserInfo(userObj);
+        }
+      }, []);  
+    
     return(
         <div>
         <NavigationBar menuItems={[
@@ -13,7 +30,22 @@ function Dashboard(){
 
         ]}/>
         <div className="DashContainer">
-        <h1 style={{marginTop:100}}>This is Dashboard Page</h1>
+        
+        {userInfo ? (
+        <div>
+         <div className="DashBox">
+        <h1>What's New in {userInfo.name}'s Moneybook</h1>
+        <p></p>
+         </div>
+         <div className='DetailBox'>
+         <h3>Consumption history: 100  </h3>   <br />
+         <h3>income details : 100  </h3>
+         </div>
+        </div>
+        ):( 
+        <p>Sign in Use your Google Account</p>
+        )}
+        
         </div>
             <Footer />
         </div>

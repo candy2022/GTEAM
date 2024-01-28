@@ -1,0 +1,17 @@
+.DashContainer{
+    margin-top: 13vh;
+    
+}
+.DashBox{
+    margin: 1%;
+    padding: 14vh;
+    background-color: rgba(132, 164, 246, 0.26);
+    border-radius: 20px;
+    color: darkblue;
+}
+.DetailBox{
+    margin: 1%;
+    padding: 4vh;
+    border-radius: 20px;
+    border: 1px solid blue;
+ }
