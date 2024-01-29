@@ -20,7 +20,6 @@ function Login(){
     <div className="content-wrap">       
       <section>
         <article id="home">
-          
           <br />
            <h1>With <span style={{color: "#5931eb"}}>NeatFin</span> <br />
             gain a clear overview of your expenses and income,<br />

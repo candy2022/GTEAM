@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavigationBar from "../Components/NavigationBar";
 import Footer from "../Components/Footer";
 import "../Styles/Dashstyle.css"
+import TinyBarChart from '../Components/TinyBarChart';
 interface UserInfo {     
     name: string;
     
@@ -40,6 +41,10 @@ function Dashboard(){
          <div className='DetailBox'>
          <h3>Consumption history: 100  </h3>   <br />
          <h3>income details : 100  </h3>
+         </div>
+         <div> 
+          <h2>6개월간 사용 내역</h2>
+          <TinyBarChart />
          </div>
         </div>
         ):( 
