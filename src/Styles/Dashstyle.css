@@ -1,6 +1,6 @@
 .DashContainer{
     margin-top: 13vh;
-    
+    margin: 0 5%;
 }
 .DashBox{
     margin: 1%;
@@ -13,5 +13,36 @@
     margin: 1%;
     padding: 4vh;
     border-radius: 20px;
-    border: 1px solid blue;
+    border: 1px solid lightgray;
+    text-align: left;
  }
+ .DetailBox2{
+    margin: 1%;
+    padding: 4vh;
+    text-align: left;
+ }
+.chartBox{
+    margin: 1%;
+    padding: 4vh;
+    text-align: left;
+} 
+p span {
+    float: right; /* span 요소를 오른쪽으로 띄워 정렬 */
+  }
+ .thebokibtn{
+    text-align: center;
+    padding: 3vh;
+    
+ } 
+.barChartBox{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+} 
+@media only screen and (max-width: 800px) {
+    .DashContainer{
+        
+        margin: 0;
+    }
+}

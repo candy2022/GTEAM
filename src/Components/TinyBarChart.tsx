@@ -49,11 +49,15 @@ const data = [
 const TinyBarChart = () => {
    
     return (
-      <ResponsiveContainer width={300}>
-        <BarChart width={150} height={40} data={data}>
-          <Bar dataKey="uv" fill="#8884d8" />
-        </BarChart>
-      </ResponsiveContainer>
+      <div style={{  width: '60vw', 
+      height: '50vh', 
+      }}>  
+    <ResponsiveContainer width="100%" height="70%">
+      <BarChart data={data}>
+        <Bar dataKey="uv" fill="#8884d8" />
+      </BarChart>
+    </ResponsiveContainer>
+  </div>
     );
   
 }
