@@ -18,7 +18,7 @@ function Mypage(){
         case 'posts':
           return <MyPosts />;
         default:
-          return null;
+          return <Account />;
         }
     };
     return(

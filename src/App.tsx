@@ -8,6 +8,7 @@ import Chart from './Pages/Chart';
 import MoneyInput from './Pages/MoneyInput';
 import MoneyBook from './Pages/MoneyBook';
 import PhotoiInput from './Pages/PhotoInput';
+import Board from './Pages/Board';
 
 function App() { 
 
@@ -23,6 +24,7 @@ function App() {
       <Route path={"moneybook/moneyinput"} element={<MoneyInput />}></Route> 
       <Route path={"moneybook/photoinput"} element={<PhotoiInput />}></Route> 
       <Route path={"/moneybook"} element={<MoneyBook />}></Route> 
+      <Route path={"/board"} element={<Board />}></Route> 
 
      </Routes>          
    </BrowserRouter>

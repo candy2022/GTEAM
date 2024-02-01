@@ -36,10 +36,10 @@
 
 }
 .income{
-    background-color: plum;
+    background-color: cornflowerblue;
 }
 .expense{
-    background-color: cornflowerblue;
+    background-color: rgb(243, 75, 63)
 }
 .backbtn{
     border: none;
@@ -65,6 +65,9 @@
 .moneyContainer {
     max-width: 30vw;
     margin: 0 auto;
+    border: 1px solid;
+    padding: 3vh 25vw;
+    
 }
   
 .inputField,

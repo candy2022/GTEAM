@@ -1,65 +1,28 @@
 import React from 'react';
-import { BarChart, Bar, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Legend } from 'recharts';
 
 const data = [
-  {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+  { name: '9월', uv: 40000 },
+  { name: '10월', uv: 30000 },
+  { name: '11월', uv: 20000 },
+  { name: '12월', uv: 90000 },
+  { name: '1월', uv: 95000 },
+  { name: '2월', uv: 100000 },
+ ];
 
 const TinyBarChart = () => {
-   
-    return (
-      <div style={{  width: '60vw', 
-      height: '50vh', 
-      }}>  
-    <ResponsiveContainer width="100%" height="70%">
-      <BarChart data={data}>
-        <Bar dataKey="uv" fill="#8884d8" />
-      </BarChart>
-    </ResponsiveContainer>
-  </div>
-    );
-  
-}
+  return (
+    <div style={{ width: '60vw', height: '50vh' }}>
+      <ResponsiveContainer width="100%" height="70%">
+        <BarChart data={data}>
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Legend />
+          <Bar dataKey="uv" fill="#8884d8" name="소비내역" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
 
 export default TinyBarChart;

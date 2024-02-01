@@ -1,10 +1,11 @@
-footer {   
+footer {    
     position: absolute;
     height: 10vh;
     width: 100%;
-    padding: 3vh 3vw;
+    padding: 3%;
     line-height: 10vh;
     color: lightgray;
     border-top: 1px solid #dee5e7;
     background-color: #222;
+    text-align: left;
 }

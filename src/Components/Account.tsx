@@ -29,11 +29,9 @@ function Account() {
         <div className='mypageheader'>
         <h3>Edit profile</h3>
       </div>
-        <hr />
         {userInfo ? (
         <div>                
         <form action = " " className="AccountContainer">
-        <hr />
         <h2>{userInfo.name} 's information</h2>
         <img className="profileimg" src={userInfo.picture} alt="googleaccountimg" />
         <h3>UserName</h3>

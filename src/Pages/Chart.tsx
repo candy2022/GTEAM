@@ -35,9 +35,9 @@ function Chart() {
             To view detailed reports or explore more features, head to the{' '}
             <a href="/dashboard">Dashboard</a> page.
           </p>
-        </div>
-        <Footer />
+        </div>        
       </div>
+      <Footer />
     </div>
   );
 }

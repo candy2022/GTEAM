@@ -1,0 +1,52 @@
+.boardContainer{
+    margin-top: 13vh;
+}
+.search{
+    width: 80%;
+    padding: 2vh;
+    margin: 1vh 1vw;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    
+}
+.searchbtn{
+    white-space: nowrap; /* 줄 바꿈 금지 */
+    padding: 2vh 2vw;  
+    border: none;
+    background-color: #5931eb9c;
+    color: #fff;
+    font-weight: bold;
+    margin: 2vh 0;
+    border-radius: 5px;
+}
+.comcategorybox{
+     border-radius: 5px;
+    margin: 1vh 0;
+    width: 80%;
+   
+}
+.comcontainer {
+    display: flex;
+    align-items: center;  
+}
+.writebtn{
+    white-space: nowrap; /* 줄 바꿈 금지 */
+    padding: 2vh 2vw;  
+    border: none;
+    background-color: #555;
+    color: #fff;
+    font-weight: bold;
+    margin: 2vh 2vw;
+    border-radius: 5px;
+}
+.writebtn:hover{
+    cursor: pointer;
+}
+.boardcontent{
+    margin: 0 5%;
+}
+@media only screen and (max-width: 400px) {
+    .search{
+        width: 70%;
+    }
+}

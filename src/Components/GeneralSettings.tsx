@@ -1,10 +1,12 @@
 import React from 'react';
+import "../Styles/MyPagestyle.css"
 function GeneralSettings(){
     return(
     <>
         <div className='mypageheader'>
             <h3>Help Center</h3>
         </div>
+        <div className="helpcontainer">
         <h2>Hi, how can we help you?</h2>
         <br />
         <h2>Notice</h2>
@@ -26,6 +28,8 @@ function GeneralSettings(){
         NEAT FIN does not leak your information anywhere else.
         </p>  
             
+        </div>
+       
 
      </>   
     )

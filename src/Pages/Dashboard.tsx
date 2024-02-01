@@ -24,7 +24,7 @@ function Dashboard(){
       }, []);  
     
     return(
-        <div>
+        <div className='Container'>
         <NavigationBar menuItems={[
           { name: 'Dashboard', link: '/dashboard' },
           { name: 'Chart', link: '/chart' },
@@ -63,15 +63,16 @@ function Dashboard(){
          <div>
          <h2>Share {userInfo.name}’s wonderful practice</h2>
           <p>Only I can see the detailed transaction history and amount.</p>
-          <button className='savebtn'>게시판에 글쓰러 가기</button>
+          <div className='thebokibtn'><Link to="/board">게시판에 글쓰러 가기 &gt;</Link></div> 
          </div>
+         
         </div>
         ):( 
         <p>Sign in Use your Google Account</p>
         )}
-        
+         
         </div>
-            <Footer />
+        <Footer />
         </div>
     )
 }

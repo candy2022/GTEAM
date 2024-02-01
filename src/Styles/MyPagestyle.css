@@ -19,13 +19,13 @@
    background-color: #eee;
 }
 .categorybox{
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     border-radius: 5px;
-    margin: 1vh;
+    margin: 1vh 0;
    
 }
 .postbox{
-    border: 1px solid gray;
+    border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10vh 2vw;
     margin: 1vh;
@@ -35,8 +35,9 @@
     margin-top: 12vh;
 }
 .mypageheader{
-    background-color: #303536;
-    color: #fff;
+     background-color: rgba(132, 164, 246, 0.26);
+    
+    color: darkblue;
     padding: 1vh;
 }
 .postcategorybtn{
@@ -52,4 +53,10 @@
 .postcategorybtn:active{
     border-bottom: 2px solid black;
 
+}
+.helpcontainer{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 1vh;
+    padding: 2vh 2vw;
 }
