@@ -9,6 +9,7 @@ import MoneyInput from './Pages/MoneyInput';
 import MoneyBook from './Pages/MoneyBook';
 import PhotoiInput from './Pages/PhotoInput';
 import Board from './Pages/Board';
+import WritePost from './Pages/WritePost';
 
 function App() { 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path={"moneybook/photoinput"} element={<PhotoiInput />}></Route> 
       <Route path={"/moneybook"} element={<MoneyBook />}></Route> 
       <Route path={"/board"} element={<Board />}></Route> 
+      <Route path={"board/writepost"} element={<WritePost />}></Route> 
 
      </Routes>          
    </BrowserRouter>

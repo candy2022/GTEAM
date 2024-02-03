@@ -4,15 +4,16 @@ import Footer from "../Components/Footer";
 import "../Styles/Boardstyle.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Board: React.FC = () => {   
-  
+ 
   return (
     <div>    
       <NavigationBar
         menuItems={[
           { name: 'Dashboard', link: '/dashboard' },
-          { name: 'Chart', link: '/chart' },
+          { name: 'Community', link: '/board' },
           { name: 'Mypage', link: '/mypage' },
           { name: 'Moneybook', link: '/moneybook'}
         ]}
@@ -36,7 +37,8 @@ const Board: React.FC = () => {
       <div className='comcategorybox'>
        &nbsp; <button className='postcategorybtn'> ● 최신순</button> <button className='postcategorybtn'> ● 정확도순</button>   
       </div>
-      <button className='writebtn'><FontAwesomeIcon icon={faPencilAlt} /> 글쓰기</button>
+      <Link to="writepost" className="writebtn"><FontAwesomeIcon icon={faPencilAlt} /> 글쓰기</Link>
+      
       </div>
       <hr />
       </div>

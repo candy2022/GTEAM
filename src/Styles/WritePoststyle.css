@@ -1,0 +1,46 @@
+.write-post-container {
+    max-width: 80vw;
+    margin: 2vh auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+#contentTextarea {
+    height: 50vh; /* 화면 높이의 50%로 설정 */
+    width: 80vw;
+    resize: vertical; /* 세로로만 리사이즈 가능하도록 설정 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+#titleInput{
+    border: none;
+    padding: 2vh 0;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+     
+  }
+  
+.backbtn {
+    align-self: flex-start; 
+}
+  
+.submitbtn {
+    align-self: flex-end;    
+    padding: 2vh 3vw;  
+    border: none;
+    background-color: #555;
+    color: #fff;
+    font-weight: bold;    
+    border-radius: 5px;
+  }
+  .submitbtn:hover{
+    cursor: pointer;
+  }
+button{
+    white-space: nowrap; 
+}
