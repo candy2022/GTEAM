@@ -4,7 +4,7 @@ import Login from './Pages/Login';
 import Dashboard from './Pages/Dashboard';
 import Googlebtn from './Components/Googlebtn';
 import Mypage from './Pages/MyPage';
-import Chart from './Pages/Chart';
+import Chart from './Components/Chart';
 import MoneyInput from './Pages/MoneyInput';
 import MoneyBook from './Pages/MoneyBook';
 import PhotoiInput from './Pages/PhotoInput';

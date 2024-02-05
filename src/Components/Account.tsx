@@ -48,7 +48,7 @@ function Account() {
             <p>Managed by Google</p>
         </div>
         <div className="AccountContainer">
-        <h3>Delete account</h3> <button>Delete</button>
+        <h3>Delete account</h3> <button className="savebtn">Delete</button>
         </div>
         </div>
       ) : (

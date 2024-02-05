@@ -1,21 +1,14 @@
 import React from "react";
-import NavigationBar from "../Components/NavigationBar";
-import PieChartComponent from "../Components/PieChart";
-import Footer from "../Components/Footer";
-
+import PieChartComponent from "./PieChart";
+ 
 import '../Styles/Chartstyle.css';
 function Chart() {
   return (
     <div>
-      <NavigationBar
-        menuItems={[
-          { name: 'Dashboard', link: '/dashboard' },
-          { name: 'Chart', link: '/chart' },
-          { name: 'Mypage', link: '/mypage' },
-          { name: 'Moneybook', link: '/moneybook'}
-        ]}
-      />
-      <div className="DashContainer">
+      <div className='mypageheader'>
+        <h3>Chart</h3>
+      </div>
+      <div >
         <h2> Check out this month's spending chart!  </h2>
         <div className="pieContainer" >
           <PieChartComponent />
@@ -37,7 +30,7 @@ function Chart() {
           </p>
         </div>        
       </div>
-      <Footer />
+      
     </div>
   );
 }

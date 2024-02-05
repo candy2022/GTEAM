@@ -12,10 +12,10 @@ const Board: React.FC = () => {
     <div>    
       <NavigationBar
         menuItems={[
-          { name: 'Dashboard', link: '/dashboard' },
+          { name: 'Home', link: '/dashboard' },
           { name: 'Community', link: '/board' },
+          { name: 'Moneybook', link: '/moneybook'},
           { name: 'Mypage', link: '/mypage' },
-          { name: 'Moneybook', link: '/moneybook'}
         ]}
       />
       <div>    
@@ -23,7 +23,7 @@ const Board: React.FC = () => {
       <div className='boardContainer'>
       <div className='mypageheader'>
         <h3>묻고 답해요 </h3>
-         <p style={{color:"white"}}>커뮤니티에서 함께 토론해봐요.</p>
+         <p style={{color:"darkblue"}}>커뮤니티에서 함께 토론해봐요.</p>
       </div>
       <div className='boardcontent'>      
       <div className='comcontainer'> 
@@ -41,6 +41,32 @@ const Board: React.FC = () => {
       
       </div>
       <hr />
+      <table>
+        <tr>
+          <th>PostId</th><th>Title</th><th>Author</th><th>DatePosted</th><th>Views</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Sample Post 1</td>
+            <td>John Doe</td>
+            <td>2024-02-05</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sample Post 2</td>
+            <td>Jane Smith</td>
+            <td>2024-02-06</td>
+            <td>220</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sample Post 3</td>
+            <td>Bob Johnson</td>
+            <td>2024-02-07</td>
+            <td>180</td>
+        </tr>
+      </table>
       </div>
       </div>
       

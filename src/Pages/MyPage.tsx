@@ -4,10 +4,10 @@ import GeneralSettings from '../Components/GeneralSettings';
 import MyPosts from '../Components/MyPosts';
 import NavigationBar from "../Components/NavigationBar";
 import Footer from "../Components/Footer";
-
+import Chart from "../Components/Chart";
 import '../Styles/MyPagestyle.css';
 function Mypage(){
-    const [currentPage, setCurrentPage] = useState<'information' | 'settings' | 'posts'>();
+    const [currentPage, setCurrentPage] = useState<'information' | 'settings' | 'posts' | 'chart'>();
 
     const renderPage = () => {
      switch (currentPage) {
@@ -17,6 +17,8 @@ function Mypage(){
           return <GeneralSettings />;
         case 'posts':
           return <MyPosts />;
+        case 'chart':
+          return <Chart />;
         default:
           return <Account />;
         }
@@ -25,10 +27,10 @@ function Mypage(){
         
         <div>
             <NavigationBar menuItems={[
-          { name: 'Dashboard', link: '/dashboard' },
-          { name: 'Chart', link: '/chart' },
-          { name: 'Mypage', link: '/mypage' },
+          { name: 'Home', link: '/dashboard' },
+          { name: 'Community', link: '/board' },
           { name: 'Moneybook', link: '/moneybook'},
+          { name: 'Mypage', link: '/mypage' },
 
         ]}/>
         <div className="myContainer" >
@@ -37,6 +39,7 @@ function Mypage(){
         <div className='myaside'>
         <h2>MyPage</h2>
         <button className="mybtn" onClick={() => setCurrentPage('information')}>Account</button>
+        <button  className="mybtn" onClick={() => setCurrentPage('chart')}>Chart</button> 
         <button  className="mybtn" onClick={() => setCurrentPage('posts')}>Posts</button>
         <button  className="mybtn" onClick={() => setCurrentPage('settings')}>Help Center</button> 
 

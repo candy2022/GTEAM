@@ -45,6 +45,28 @@
 .boardcontent{
     margin: 0 5%;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5vh 0;
+
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color:rgba(132, 164, 246, 0.132);
+}
+
+th {
+    background-color: #555;
+    color: white;
+    border: none;
+ }
 @media only screen and (max-width: 400px) {
     .search{
         width: 70%;

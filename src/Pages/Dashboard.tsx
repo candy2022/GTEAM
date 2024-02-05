@@ -26,11 +26,10 @@ function Dashboard(){
     return(
         <div className='Container'>
         <NavigationBar menuItems={[
-          { name: 'Dashboard', link: '/dashboard' },
-          { name: 'Chart', link: '/chart' },
-          { name: 'Mypage', link: '/mypage' },
+          { name: 'Home', link: '/dashboard' },
+          { name: 'Community', link: '/board' },
           { name: 'Moneybook', link: '/moneybook'},
-
+          { name: 'Mypage', link: '/mypage' },
         ]}/>
         <div className="DashContainer">
         
