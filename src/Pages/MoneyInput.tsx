@@ -3,10 +3,9 @@ import TransactionInput from "../Components/TransactionInput";
 import NavigationBar from "../Components/NavigationBar";
 import { Link } from 'react-router-dom';
 import "../Styles/inputstyle.css";
+
 function MoneyInput() {
-  const [selectedType, setSelectedType] = useState<"income" | "expense" >(
-    "expense"
-  );
+  const [selectedType, setSelectedType] = useState<"income" | "expense">("expense");
 
   const handleButtonClick = (type: "income" | "expense") => {
     setSelectedType(type);
@@ -22,19 +21,21 @@ function MoneyInput() {
           { name: 'Mypage', link: '/mypage' },
         ]}
       />
-       <div className="inputContainer">
-       <Link to="/moneybook"><button className='backbtn' >&lt;</button> </Link>
+      <div className="inputContainer">
+        <div className="buttonRow">
+          <Link to="/moneybook"><button className="backbtn" >&lt;</button></Link>
+          <div>
 
-        <br />
-      <button className="moneybtn income" onClick={() => handleButtonClick("income")}>Income</button>
-      <button className="moneybtn expense" onClick={() => handleButtonClick("expense")}>Expense</button>
-        <div className="transContainer" >
-        {selectedType === "income" && <TransactionInput type="income" />}
-        {selectedType === "expense" && <TransactionInput type="expense" />}
-  
+         
+          <button className={`moneybtn income ${selectedType === "income" ? "": "selected"}`} onClick={() => handleButtonClick("income")}>Income</button>
+          <button className={`moneybtn expense ${selectedType === "expense" ? "" :"selected" }`} onClick={() => handleButtonClick("expense")}>Expense</button>
+        </div> </div>
+
+        <div className="transContainer">
+          {selectedType === "income" && <TransactionInput type="income" />}
+          {selectedType === "expense" && <TransactionInput type="expense" />}
         </div>
-     
-       </div>
+      </div>
     </div>
   );
 }

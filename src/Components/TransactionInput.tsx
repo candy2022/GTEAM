@@ -31,7 +31,7 @@ const TransactionInput: React.FC<TransactionInputProps> = ({ type }) => {
 
   return (
     <div>
-      <h2 className="title">{type === "expense" ? "Expense" : "Income"} Input Page</h2>
+      <h2 className="title">{type === "expense" ? "소비 내역을 입력하세요." : "수입 내역을 입력하세요."}</h2>
       <div className="moneyContainer">
         <form onSubmit={handleTransactionSubmit}>
         <label>

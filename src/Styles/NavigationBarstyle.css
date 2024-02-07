@@ -37,7 +37,17 @@ nav { float: right; }
   box-shadow: 0 0 10px #b5a4f460;  
 
 }
- 
+.logoutbtn{
+  padding:1.5vh 2vw; /*위아래 좌우*/
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.4em;
+  border: none;
+}
+.logoutbtn:hover{
+  cursor: pointer;
+}
 @media only screen and (max-width: 940px) {
     header {
        

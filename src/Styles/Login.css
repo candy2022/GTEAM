@@ -36,8 +36,7 @@ article {
     justify-content: center;
     align-items: center;
     height: 70vh;
-    border: 1px solid;
-}
+ }
 .container {
        display: flex; width: 100%; 
        padding: 2vh;
@@ -99,14 +98,13 @@ article {
         margin: 1%;
         padding: 25px;
         float: left;
-        border: 1px solid green;
-    }
+     }
     
-    .img1 {
+    .img1,.img2 {
         height: 100%;
         width: 100%;
-        border: 1px solid red;
-    }
+     }
+     
     .container{
         flex-direction: column; /* 모바일 화면에서는 세로로 배치 */
         width: 92%; 

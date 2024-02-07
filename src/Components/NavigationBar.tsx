@@ -14,7 +14,9 @@ interface NavigationBarProps {
  
 function NavigationBar({ menuItems }: NavigationBarProps) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+    const isLoggedIn = !!sessionStorage.getItem('name'); // name이 존재하면 true, 없으면 false
+    const redirectPath = isLoggedIn ? '/dashboard' : '/';
+
     const toggleMobileMenu = () => {
       setMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -22,7 +24,8 @@ function NavigationBar({ menuItems }: NavigationBarProps) {
     const closeMobileMenu = () => {
       setMobileMenuOpen(false);
     };
-  
+     
+   
     useEffect(() => {
       const closeMenuOnOutsideClick = (event: MouseEvent) => {
         if (
@@ -42,7 +45,8 @@ function NavigationBar({ menuItems }: NavigationBarProps) {
   
     return (
       <header>
-        <a className="logo" href="/">          
+          
+        <a className="logo" href={redirectPath}>          
           <img src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="logoimg" />
         </a>  
         <nav>
@@ -66,7 +70,7 @@ function NavigationBar({ menuItems }: NavigationBarProps) {
                 )}                
               </li>
                ))}
-            <li><Googlebtn /></li>
+              <Googlebtn />
           </ul>
         </nav>
       </header>
