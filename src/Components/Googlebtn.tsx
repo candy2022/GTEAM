@@ -21,6 +21,21 @@ function Googlebtn() {
  
      navigate('/dashboard');
   };
+  const handleGoogleButtonClick = () => {
+    // 클릭 이벤트 처리 로직을 여기에 추가
+    console.log('Google 버튼이 클릭되었습니다.');
+  };
+  const isLoggedIn = !!sessionStorage.getItem('name'); // name이 존재하면 true, 없으면 false
+
+  const handleLogout = () => {
+    // 세션 스토리지에서 로그인 정보 삭제
+    sessionStorage.removeItem('email');
+    sessionStorage.removeItem('name');
+    sessionStorage.removeItem('picture');
+
+    // 로그아웃 후 홈페이지로 리다이렉트
+    navigate('/');
+  };
    /* const sendToServer = (credentialResponse: CredentialResponse ) => {
       const requestBody  =JSON.stringify({credentialResponse});
          
@@ -42,13 +57,23 @@ function Googlebtn() {
       };*/
   return (
 <GoogleOAuthProvider clientId={import.meta.env.VITE_CLIENT_ID}>
-        
-        <GoogleLogin
-          onSuccess={handleGoogleLogin}
-          onError={() => {
-            console.log('Login Failed');
-          }}
-        />
+{isLoggedIn ? (
+        // 로그인된 경우
+        <div>
+           <button className='logoutbtn' onClick={handleLogout}>로그아웃</button>
+          {/* 로그인된 사용자에 대한 추가 UI 또는 동작을 여기에 추가할 수 있습니다. */}
+        </div>
+      ) : (
+        // 로그인되지 않은 경우
+        <div onClick={handleGoogleButtonClick}>
+          <GoogleLogin
+            onSuccess={handleGoogleLogin}
+            onError={() => {
+              console.log('Login Failed');
+            }}
+          />
+        </div>
+      )}
       </GoogleOAuthProvider>   
   );
 }
