@@ -1,14 +1,6 @@
 import React from "react";
-type MoneyType = "expense" | "income";
-
-interface Money {
-  id: number;
-  type:MoneyType;
-  category: string;
-  amount: number;
-  date: string;
-}
-
+import { Money } from "./types";  
+import "../Styles/Historystyle.css"
 interface MoneyHistoryProps {
   moneys: Money[];
 }
@@ -16,21 +8,16 @@ interface MoneyHistoryProps {
 const MoneyHistory: React.FC<MoneyHistoryProps> = ({ moneys }) => {
   return (
     <div className='historyContainer'>
-      <p>내역</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>{moneys.length > 0 ? (moneys[0].type === "expense" ? "소비" : "수입") : "Category"}</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
+       
+      <table className="historytable">
+        
         <tbody>
           {moneys.map((money) => (
             <tr key={money.id}>
               <td>{money.date}</td>
-              <td>{money.category}</td>
-              <td>{money.amount}</td>
+              <td>{money.detail}</td>
+              <td style={{ color: money.type === "income" ? "blue" : "inherit" }}>
+                {money.amount}</td>
             </tr>
           ))}
         </tbody>

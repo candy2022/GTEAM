@@ -38,11 +38,11 @@ nav { float: right; }
 
 }
 .logoutbtn{
-  padding:1.5vh 2vw; /*위아래 좌우*/
+  padding:1vh 1vw; /*위아래 좌우*/
   background-color: darkblue;
   color: white;
   border-radius: 5px;
-  font-size: 1.4em;
+  font-size: 1em;
   border: none;
 }
 .logoutbtn:hover{

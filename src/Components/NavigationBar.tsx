@@ -70,7 +70,7 @@ function NavigationBar({ menuItems }: NavigationBarProps) {
                 )}                
               </li>
                ))}
-              <Googlebtn />
+             <li> <Googlebtn /></li>
           </ul>
         </nav>
       </header>

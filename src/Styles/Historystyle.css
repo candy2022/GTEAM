@@ -1,0 +1,9 @@
+.historytable td,th {
+    border: none;
+    padding: 2vh;
+     
+}
+.historytable tr{
+    border: 1px solid #eee;
+    background-color: #fff;
+}

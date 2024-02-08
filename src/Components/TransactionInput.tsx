@@ -1,31 +1,39 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom'; 
 import "../Styles/inputstyle.css"
-type TransactionType = "expense" | "income";
+import { MoneyType, Money } from "../Components/types";  
 
-interface TransactionInputProps {
-  type: TransactionType;
+interface MoneyInputProps {
+  type: MoneyType;
+  onTransactionSubmit: (money: Money) => void;  
+
 }
-
-const TransactionInput: React.FC<TransactionInputProps> = ({ type }) => {
+ 
+const TransactionInput: React.FC<MoneyInputProps> = ({ type, onTransactionSubmit }) => {
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
+  const [detail, setDetail] = useState("");
   const navigate = useNavigate();  
 
   const handleTransactionSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // 여기에서 입력된 데이터를 서버에 전송하거나 상태를 업데이트하는 로직을 추가할 수 있습니다.
-    console.log("Type:", type);
-    console.log("Category:", category);
-    console.log("Amount:", amount);
-    console.log("Date:", date);
 
-    // 입력 후에 필드를 초기화합니다.
+    const newMoney: Money = {
+      id: Date.now(),
+      type,
+      category,
+      amount: parseFloat(amount), // Assuming amount is a number, adjust if needed
+      date,
+      detail,
+    };
+
+    onTransactionSubmit(newMoney);
+
     setCategory("");
     setAmount("");
     setDate("");
-
+    setDetail("");
     navigate('/moneybook');
   };
 
@@ -41,6 +49,16 @@ const TransactionInput: React.FC<TransactionInputProps> = ({ type }) => {
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Detail:
+            <input
+              className="inputField"
+              type="detail"
+              value={detail}
+              onChange={(e) => setDetail(e.target.value)}
             />
           </label>
           <br />

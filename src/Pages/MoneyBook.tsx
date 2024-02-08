@@ -3,13 +3,19 @@ import NavigationBar from "../Components/NavigationBar";
 import '../Styles/MoneyBookstyle.css';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../Components/Footer";
+import MoneyHistory from "../Components/MoneyHistory";
+ 
 
 const MoneyBook: React.FC = () => {
+   
     const navigate = useNavigate();
     const handleClick = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedValue = event.target.value;
         navigate(selectedValue);
       };
+    const storedMoneys = localStorage.getItem("moneys");
+    const moneys = storedMoneys ? JSON.parse(storedMoneys) : [];
+
   return (
     <div>
       <NavigationBar
@@ -22,7 +28,7 @@ const MoneyBook: React.FC = () => {
       />
       <div className='moneybook-container'>
        <div className='moneybook-content'>
-        {/* 좌측 내용 */}
+
         <div>
           <label>날짜 선택:</label>
           <input type="date" />
@@ -40,7 +46,9 @@ const MoneyBook: React.FC = () => {
       </div>
       <hr />
       <div className='historyContainer'>
-      <p>내역이 없습니다.</p>
+      
+      <MoneyHistory moneys={moneys} />
+      
       </div>
       
       <Footer />        
