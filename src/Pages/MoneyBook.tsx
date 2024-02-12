@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import NavigationBar from "../Components/NavigationBar";
-import '../Styles/MoneyBookstyle.css';
-import { useNavigate } from 'react-router-dom';
 import Footer from "../Components/Footer";
 import MoneyHistory from "../Components/MoneyHistory";
- 
+import { useNavigate } from 'react-router-dom';
+import '../Styles/MoneyBookstyle.css';
 
 const MoneyBook: React.FC = () => {
-   
-    const navigate = useNavigate();
-    const handleClick = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const selectedValue = event.target.value;
-        navigate(selectedValue);
-      };
-    const storedMoneys = localStorage.getItem("moneys");
-    const moneys = storedMoneys ? JSON.parse(storedMoneys) : [];
+  const navigate = useNavigate();
+  const [selectedDate, setSelectedDate] = useState<string | undefined>(undefined);
+
+  const handleClick = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = event.target.value;
+    navigate(selectedValue);
+  };
+
+  const storedMoneys = localStorage.getItem("moneys");
+  const moneys = storedMoneys ? JSON.parse(storedMoneys) : [];
 
   return (
     <div>
@@ -24,35 +25,30 @@ const MoneyBook: React.FC = () => {
           { name: 'Community', link: '/board' },
           { name: 'Moneybook', link: '/moneybook'},
           { name: 'Mypage', link: '/mypage' },
-         ]}
+        ]}
       />
       <div className='moneybook-container'>
-       <div className='moneybook-content'>
-
-        <div>
-          <label>날짜 선택:</label>
-          <input type="date" />
+        <div className='moneybook-content'>
+          <div>
+            <label>View by month : </label>
+            <input type="month" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} />
+          </div>
         </div>
-       </div>
-      
-       {/* 우측 내용 (내역 추가하기 부분) */}
-       <div className='add-container'>
-         <select name="add" id="" onChange={handleClick}>
-         <option value="">+ 내역 추가하기</option>
-          <option value="moneyinput">직접 기입하기</option>
-          <option value="photoinput">갤러리에서 찾기</option>
-        </select>
-       </div>
+
+        {/* 우측 내용 (내역 추가하기 부분) */}
+        <div className='add-container'>
+          <select name="add" id="" onChange={handleClick}>
+            <option value="">+ Enter consumption details</option>
+            <option value="moneyinput">write directly</option>
+            <option value="photoinput">Input as image</option>
+          </select>
+        </div>
       </div>
       <hr />
       <div className='historyContainer'>
-      
-      <MoneyHistory moneys={moneys} />
-      
+        <MoneyHistory moneys={moneys} />
       </div>
-      
-      <Footer />        
-        
+      <Footer />
     </div>
   );
 };

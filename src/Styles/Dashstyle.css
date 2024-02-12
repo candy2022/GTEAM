@@ -1,7 +1,8 @@
-.DashContainer{
+.DashContainer1{
     margin-top: 13vh;
-    margin: 0 5%;
-}
+    text-align: center;
+ }
+ 
 .Container{
     overflow-x: hidden; 
 
@@ -17,18 +18,24 @@
     margin: 1%;
     padding: 4vh;
     border-radius: 20px;
-    border: 1px solid lightgray;
+    border: 1px solid #eee;
     text-align: left;
  }
  .DetailBox2{
     margin: 1%;
     padding: 4vh;
     text-align: left;
+    border: 1px solid #eee;
+    border-radius: 20px;
+
  }
 .chartBox{
     margin: 1%;
     padding: 4vh;
     text-align: left;
+    border: 1px solid #eee;
+    border-radius: 20px;
+
 } 
 p span {
     float: right; /* span 요소를 오른쪽으로 띄워 정렬 */
@@ -47,5 +54,8 @@ p span {
 @media only screen and (max-width: 900px) {
     .DashContainer{        
         margin: 0;
+    }
+    .DashBox{
+        padding: 8vh;
     }
 }

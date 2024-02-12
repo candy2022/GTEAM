@@ -60,7 +60,7 @@ function Googlebtn() {
 {isLoggedIn ? (
         // 로그인된 경우
         <div>
-           <button className='logoutbtn' onClick={handleLogout}>로그아웃</button>
+           <button className='logoutbtn' onClick={handleLogout}>logout</button>
           {/* 로그인된 사용자에 대한 추가 UI 또는 동작을 여기에 추가할 수 있습니다. */}
         </div>
       ) : (

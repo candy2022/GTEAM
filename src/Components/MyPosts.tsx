@@ -3,7 +3,7 @@ import '../Styles/MyPagestyle.css'
 function MyPosts () {
  
   return (
-    <div>
+    <div className='postContainer'>
       <div className='mypageheader'>
         <h3>Posts</h3>
       </div>

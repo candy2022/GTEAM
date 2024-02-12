@@ -3,6 +3,7 @@
     padding: 3%;
     margin: 1%;
     border-radius: 5px;
+    width: 80vw;
 }
 .Accountimgbtn{
     background-color: #242342;
@@ -20,8 +21,17 @@
     padding: 1vw;
     margin: 2vh 0;
 }
-.myTextArea{
-    width: 100%;
+#myTextArea{    
+    height: 100%;  
+    width: 99%;
+    border: 1px solid  rgba(132, 164, 246, 0.26);
+    border-radius: 5px;
+    margin-top: 1vh;  
+      
+}
+.textareacontainer{
+    border: 1px solid;
+    padding: 1%;
 }
 .savebtn{    
     padding:2vh 10vw; /*위아래 좌우*/

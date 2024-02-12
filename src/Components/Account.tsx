@@ -37,9 +37,11 @@ function Account() {
         <h3>UserName</h3>
         <input className="nickinput" type="text" placeholder={userInfo.name} />
         <h3>Pronouns</h3>
-        <div style={{ width: '60vw', height: '20vh' }}>
-        <textarea id="myTextArea" style={{ width: '100%', height: '100%' }} rows={5} cols={50}></textarea>
-        </div>        <br />
+        <div className="textareacontainer">
+        <textarea id="myTextArea" ></textarea>
+        </div>
+        <br />
+         
         <button className="savebtn">submit</button>
         </form>
         <div className="AccountContainer">

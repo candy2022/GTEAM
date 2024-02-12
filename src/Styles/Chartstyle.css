@@ -1,7 +1,4 @@
-.DashContainer{
-    margin-top: 100px;
-    text-align: center;
- }
+ 
 .pieContainer{
     display: 'flex';
     justify-content: 'center'

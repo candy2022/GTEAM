@@ -31,38 +31,44 @@ function Dashboard(){
           { name: 'Moneybook', link: '/moneybook'},
           { name: 'Mypage', link: '/mypage' },
         ]}/>
-        <div className="DashContainer">
+        <div className="DashContainer1">
         
         {userInfo ? (
-        <div>
+        <div >
          <div className="DashBox">
         <h1>What's New in {userInfo.name}'s Moneybook</h1>
         <p></p>
          </div>
          <div className='DetailBox'>
-          <h3>1월 전체 내역</h3>
-          <h2><span style={{color:"blue"}}>2,000,000원</span></h2>
+          <h3>January full details</h3>
+          <h2><span style={{color:"darkblue"}}>₩2,000,000</span></h2>
           <hr />
-         <p> Consumption history 10건 <span> 1,000,000원</span>  </p>   <br />
-         <p>income details 2건 <span> 1,000,000원</span>  </p>
+          <p>Expenses Transactions: 10&nbsp;<span>₩1,000,000</span></p>
+          <br />
+          <p>Income Transactions: 2&nbsp;<span>₩1,000,000</span></p>
+
          </div>
          <div className='chartBox'> 
-          <h2>12월보다 <span style={{color:"blue"}}>50,000원 </span>더 사용했어요.</h2>
-          <p> 지난 6개월 평균 거래 금액은 1,000,000원이에요.</p>
+         <h2>You spent <span style={{color: "darkblue"}}>₩50,000 more</span> than in December.</h2>
+         <p>The average transaction amount for the past 6 months is ₩1,000,000.</p>
+         <br />
          <div className='barChartBox'> <TinyBarChart /></div>
          </div>
          <div className='DetailBox2'>
-          <h2>거래내역</h2>
-          <p>배달의 민족 <span>29,000원</span></p>
-          <p>요기요  <span>50,000원</span></p>
+         <h2>Transaction History</h2>
+         <p>Baemin <span>₩29,000</span></p>
+         <p>Yogiyo <span>₩50,000</span></p>
           <hr />
-          <div className='thebokibtn'><Link to="/moneybook">거래 내역 더보기 &gt;</Link></div> 
+          <div className='thebokibtn'>
+            <Link to="/moneybook">View More Transaction History &gt;</Link>
+          </div>
 
          </div>
          <div>
          <h2>Share {userInfo.name}’s wonderful practice</h2>
           <p>Only I can see the detailed transaction history and amount.</p>
-          <div className='thebokibtn'><Link to="/board">게시판에 글쓰러 가기 &gt;</Link></div> 
+          <div className='thebokibtn'>
+            <Link to="/board">Go to Write a Post on the Bulletin Board &gt;</Link></div> 
          </div>
          
         </div>

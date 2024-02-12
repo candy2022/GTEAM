@@ -1,6 +1,7 @@
 .moneybook-container {
     display: flex;
     margin-top: 13vh;
+    
 }
   
 .moneybook-content {
@@ -27,4 +28,6 @@ select:hover{
 }
 .historyContainer{
     padding-bottom: 10vh;
+  
+   
 }

@@ -39,7 +39,7 @@ const TransactionInput: React.FC<MoneyInputProps> = ({ type, onTransactionSubmit
 
   return (
     <div>
-      <h2 className="title">{type === "expense" ? "소비 내역을 입력하세요." : "수입 내역을 입력하세요."}</h2>
+      <h2 className="title">{type === "expense" ? "Please enter your consumption details" : "Please enter your income details."}</h2>
       <div className="moneyContainer">
         <form onSubmit={handleTransactionSubmit}>
         <label>

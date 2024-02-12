@@ -27,15 +27,17 @@ article {
     scroll-margin-top: 12vh;
 }
 
-.img1 {  display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.img1 {  
+    display: block;
+    margin: auto;
+    width: 50%; /* 최대 너비를 화면 너비에 맞게 설정합니다. */
+    height: auto;
 }
 .img2 {  display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 65vh;
+    margin: auto;
  }
 .container {
        display: flex; width: 100%; 
@@ -83,7 +85,7 @@ article {
 .contactbox h3 span{
     color: gray;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     
     h1{
        font-size: 1.5em;

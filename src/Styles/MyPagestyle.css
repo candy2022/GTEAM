@@ -1,9 +1,10 @@
 .myaside {
     width: 20vw;
     height: 100vw;
-    padding: 10px;
-    
+    padding: 10px;     
+    border: 1px solid blue;
 }  
+
 .mybtn {
     width: 95%;
     padding: 1vmax;
@@ -28,15 +29,16 @@
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 10vh 2vw;
-    margin: 1vh;
+    margin: 1vh 0;
 }
  
-.myContainer{
-    margin-top: 12vh;
+.myContainer1{
+    margin-top: 13vh;
+    width: 100%;  
+    overflow-x: hidden;  
 }
 .mypageheader{
-     background-color: rgba(132, 164, 246, 0.26);
-    
+    background-color: rgba(132, 164, 246, 0.26);
     color: darkblue;
     padding: 1vh;
 }
@@ -54,9 +56,57 @@
     border-bottom: 2px solid black;
 
 }
+.postContainer{
+    width: 80vw;
+}
+
 .helpcontainer{
     border: 1px solid lightgray;
     border-radius: 5px;
     margin: 1vh;
     padding: 2vh 2vw;
+    width: 80vw;}
+.mycon{  
+     padding: 10px;
+     border: 1px solid;
+      
 }
+.toggle-btn {
+    display: none;
+  }
+@media (max-width: 900px) { 
+   
+    .mybtn {
+      text-align: center;
+      
+    }
+  }
+  @media (max-width: 414px) {
+    .myaside {
+        width: 100%;
+        height: auto;
+        position: static;     
+        background-color: #fff;     
+        transition: transform 0.3s ease;  
+        transform: translateX(0); 
+        z-index: 2;
+      }
+    .myaside.hidden {
+          transform: translateX(-100%);  
+        }
+      
+    .toggle-btn {
+        display: block;
+        background-color: #fff;
+        z-index: 3;
+      }
+   
+    .mycon {
+        flex: 1;
+        padding: 10px;
+        transition: transform 0.3s ease;  
+        transform: translateX(0); 
+        transform: translateX(-35vw);
+        z-index: 1;
+      }
+  }

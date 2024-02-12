@@ -52,10 +52,13 @@
     background-color: #fff;
     padding:1vh 1vw;
     margin-right: 1vw;
+    color: gray;
  }
 .backbtn:hover{
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(214, 188, 210, 0.591);  
+    background-color:  rgba(132, 164, 246, 0.26);  
+    color: #fff;
+    border-radius: 10px;
    
 }
 .sulmung{

@@ -12,7 +12,7 @@ const data = [
 
 const TinyBarChart = () => {
   return (
-    <div style={{ width: '60vw', height: '50vh' }}>
+    <div style={{ width: '70vw', height: '50vh' }}>
       <ResponsiveContainer width="100%" height="70%">
         <BarChart data={data}>
           <XAxis dataKey="name" />

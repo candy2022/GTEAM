@@ -38,7 +38,7 @@ function Login(){
             </h3> 
             <Googlebtn />
 
-            <img className="img1" src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="img" />
+            <img className="img1" src="/src/assets/mainimg1.png" alt="img" />
 
             </article>
         <article id="about">
@@ -96,7 +96,7 @@ Exchange valuable tips on financial management and share experiences with others
            </h3>
          </div>
         <div className="text2">           
-        <img className="img2" src="https://avatars.githubusercontent.com/u/155896979?s=200&v=4" alt="img" />
+        <img className="img2" src="/src/assets/mainimg1.png" alt="img" />
 
          </div>
         </div>

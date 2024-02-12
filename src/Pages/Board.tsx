@@ -22,22 +22,22 @@ const Board: React.FC = () => {
       
       <div className='boardContainer'>
       <div className='mypageheader'>
-        <h3>묻고 답해요 </h3>
-         <p style={{color:"darkblue"}}>커뮤니티에서 함께 토론해봐요.</p>
+        <h3>Ask and answer together. </h3>
+         <p style={{color:"darkblue"}}> Let's discuss in the community..</p>
       </div>
       <div className='boardcontent'>      
       <div className='comcontainer'> 
       <input className='search' type="text" 
-        placeholder= "검색어를 입력하세요">
+        placeholder= "Enter your search term...">
        </input>
-      <button className='searchbtn'><FontAwesomeIcon icon={faMagnifyingGlass} /> 검색</button>
+      <button className='searchbtn'><FontAwesomeIcon icon={faMagnifyingGlass} /> search</button>
       </div>
       <br />
       <div className='comcontainer'> 
       <div className='comcategorybox'>
-       &nbsp; <button className='postcategorybtn'> ● 최신순</button> <button className='postcategorybtn'> ● 정확도순</button>   
+       &nbsp; <button className='postcategorybtn'> ● Latest</button> <button className='postcategorybtn'> ● accuracy</button>   
       </div>
-      <Link to="writepost" className="writebtn"><FontAwesomeIcon icon={faPencilAlt} /> 글쓰기</Link>
+      <Link to="writepost" className="writebtn"><FontAwesomeIcon icon={faPencilAlt} /> Write a post</Link>
       
       </div>
       <hr />
