@@ -1,5 +1,12 @@
- 
+.chartContainer{
+    width: 80vw;
+}
 .pieContainer{
     display: 'flex';
     justify-content: 'center'
+}
+@media (max-width: 414px) { 
+    .chartContainer{
+        width: 90vw;
+    }
 }

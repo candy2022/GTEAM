@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import "../Styles/Accountstyle.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWallet,  faCommentDollar, faHome , faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 interface UserInfo {
   email: string;
   name: string;
@@ -25,29 +29,29 @@ function Account() {
   }, []);  
 
   return(
-       <div>
+       <div className='AContainer'>
         <div className='mypageheader'>
         <h3>Edit profile</h3>
       </div>
         {userInfo ? (
-        <div>                
-        <form action = " " className="AccountContainer">
-        <h2>{userInfo.name} 's information</h2>
+        <div >                
+        <div className="AccountContainer">        
+        <div className="profile-container">
         <img className="profileimg" src={userInfo.picture} alt="googleaccountimg" />
-        <h3>UserName</h3>
-        <input className="nickinput" type="text" placeholder={userInfo.name} />
-        <h3>Pronouns</h3>
-        <div className="textareacontainer">
-        <textarea id="myTextArea" ></textarea>
-        </div>
-        <br />
-         
-        <button className="savebtn">submit</button>
-        </form>
-        <div className="AccountContainer">
-            <h3>Email</h3>
-            <div className="nickinput" >{userInfo.email}</div> 
+        <div className="profile-info">
+        <h2>Hi {userInfo.name}</h2>         
+        </div>      
+        </div>      
+       <h3><FontAwesomeIcon icon={faEnvelope} /> Email</h3>
+        <div className="nickinput" >{userInfo.email}</div> 
             <p>Managed by Google</p>
+         </div>
+        <div className="LinkContainer">
+        <Link to="/dashboard"><FontAwesomeIcon icon={faHome} /> </Link>
+
+        <Link to="/moneybook"><FontAwesomeIcon icon={faWallet} /> </Link> 
+        <Link to="/board"><FontAwesomeIcon icon={faCommentDollar} /> </Link>
+         
         </div>
         <div className="AccountContainer">
         <h3>Delete account</h3> <button className="savebtn">Delete</button>

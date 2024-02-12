@@ -96,7 +96,7 @@ Exchange valuable tips on financial management and share experiences with others
            </h3>
          </div>
         <div className="text2">           
-        <img className="img2" src="/src/assets/mainimg1.png" alt="img" />
+        <img className="img2" src="/src/assets/mainimg2.png" alt="img" />
 
          </div>
         </div>

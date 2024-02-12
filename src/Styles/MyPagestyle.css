@@ -1,8 +1,7 @@
 .myaside {
     width: 20vw;
-    height: 100vw;
+    height: 100vh;
     padding: 10px;     
-    border: 1px solid blue;
 }  
 
 .mybtn {
@@ -14,7 +13,7 @@
     font-weight: bold;
     font-size: 1em;
     text-align: center;
-    border: 1px solid gray;
+    border: 1px solid lightgray;
 }
 .mybtn:hover{  
    background-color: #eee;
@@ -33,7 +32,7 @@
 }
  
 .myContainer1{
-    margin-top: 13vh;
+    margin-top: 12vh;
     width: 100%;  
     overflow-x: hidden;  
 }
@@ -41,6 +40,7 @@
     background-color: rgba(132, 164, 246, 0.26);
     color: darkblue;
     padding: 1vh;
+    width: 100vw;
 }
 .postcategorybtn{
     background-color: #fff;
@@ -61,26 +61,18 @@
 }
 
 .helpcontainer{
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    margin: 1vh;
-    padding: 2vh 2vw;
-    width: 80vw;}
+   
+    width: 80vw;
+}
 .mycon{  
      padding: 10px;
-     border: 1px solid;
-      
+       
 }
 .toggle-btn {
     display: none;
+    z-index: 10;
   }
-@media (max-width: 900px) { 
-   
-    .mybtn {
-      text-align: center;
-      
-    }
-  }
+ 
   @media (max-width: 414px) {
     .myaside {
         width: 100%;
@@ -98,9 +90,18 @@
     .toggle-btn {
         display: block;
         background-color: #fff;
-        z-index: 3;
-      }
-   
+        z-index: 10;
+        border: none;
+        transform: translateX(22vw);
+        position: absolute;
+        top: 14vh;
+        left: 10vw;
+        transition: transform 0.3s ease; 
+    }
+    .toggle-btn.hidden{
+        transform: translateX(-10vw); 
+        
+    }   
     .mycon {
         flex: 1;
         padding: 10px;
@@ -109,4 +110,5 @@
         transform: translateX(-35vw);
         z-index: 1;
       }
+      
   }

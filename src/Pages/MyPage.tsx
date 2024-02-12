@@ -5,6 +5,9 @@ import MyPosts from '../Components/MyPosts';
 import NavigationBar from '../Components/NavigationBar';
 import Footer from '../Components/Footer';
 import Chart from '../Components/Chart';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser,faChartPie, faPenToSquare, faComment,  faList  } from '@fortawesome/free-solid-svg-icons';
+
 import '../Styles/MyPagestyle.css';
 
 function Mypage() {
@@ -16,7 +19,7 @@ function Mypage() {
   };
 
   const hideSidebar = () => {
-    setSidebarHidden(false);
+    setSidebarHidden(true);
   };
 
   const renderPage = () => {
@@ -44,18 +47,24 @@ function Mypage() {
         { name: 'Mypage', link: '/mypage' },
       ]} />
 
-      <div className={`myContainer1 ${sidebarHidden ? 'full-width' : ''}`}>
+      <div className="myContainer1 ">
         <div>
           <div style={{ display: 'flex' }}>
             <div className={`myaside ${sidebarHidden ? 'hidden' : ''}`}>
               <h2>MyPage</h2>
-              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('information'); }}>Account</button>
-              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('chart');}}>Chart</button>
-              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('posts');}}>Posts</button>
-              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('settings');}}>Help Center</button>
+              <br />
+              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('information'); }}>
+              <FontAwesomeIcon icon={faUser} /> Account</button>
+              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('chart');}}>
+              <FontAwesomeIcon icon={faChartPie} /> Chart</button>
+              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('posts');}}>
+              <FontAwesomeIcon icon={faPenToSquare} /> Posts</button>
+              <button className="mybtn" onClick={() => { toggleSidebar(); setCurrentPage('settings');}}>
+              <FontAwesomeIcon icon={faComment} />  Help Center</button>
              </div>
+             <button className={`toggle-btn ${sidebarHidden ? 'hidden' : ''}`} onClick={() => toggleSidebar()}> <FontAwesomeIcon icon={faList} /> </button>
+
             <div className={`mycon ${sidebarHidden ? 'move-left' : ''}`} onClick={hideSidebar}>
-              <button className="toggle-btn" onClick={toggleSidebar}>&gt;</button>
               {renderPage()}
             </div>
           </div>

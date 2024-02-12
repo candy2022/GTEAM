@@ -4,12 +4,12 @@ import PieChartComponent from "./PieChart";
 import '../Styles/Chartstyle.css';
 function Chart() {
   return (
-    <div>
+    <div className="chartContainer">
       <div className='mypageheader'>
         <h3>Chart</h3>
       </div>
       <div >
-        <h2> Check out this month's spending chart!  </h2>
+        <h2 style={{textAlign: "center"}}> Check out this month's  chart!  </h2>
         <div className="pieContainer" >
           <PieChartComponent />
         </div>

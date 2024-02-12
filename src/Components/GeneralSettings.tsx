@@ -1,12 +1,15 @@
 import React from 'react';
 import "../Styles/MyPagestyle.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCommentDots , faClipboardQuestion} from '@fortawesome/free-solid-svg-icons';
+
 function GeneralSettings(){
     return(
-    <>
+    <div  className="helpcontainer">
         <div className='mypageheader'>
             <h3>Help Center</h3>
         </div>
-        <div className="helpcontainer">
+        <div>
         <h2>Hi, how can we help you?</h2>
         <br />
         <h2>Notice</h2>
@@ -27,11 +30,30 @@ function GeneralSettings(){
         <p>
         NEAT FIN does not leak your information anywhere else.
         </p>  
-            
+        <br />
+        <h2> <FontAwesomeIcon icon={faCommentDots} style={{fontSize: "2em"}} />  &nbsp;         
+        Frequently Asked Questions</h2>
+          
+          <p  >
+          <hr />
+          <FontAwesomeIcon icon={faClipboardQuestion} style={{fontSize: "2em"}} />  &nbsp;
+
+          Is my data secure? <br />  <br />
+          Absolutely. We prioritize the security and privacy of your data. 
+            All your financial information is encrypted and stored securely. 
+          <br /><hr />
+          <FontAwesomeIcon icon={faClipboardQuestion} style={{fontSize: "2em"}} />  &nbsp;
+
+            Can I access the Financial Tracker on my mobile device? <br /><br />
+            Yes, the Financial Tracker is available on both desktop and mobile devices.
+           You can track your finances anytime, anywhere. 
+          <hr />
+          </p>
+          <br />
         </div>
        
 
-     </>   
+     </div>   
     )
 }
 export default GeneralSettings;

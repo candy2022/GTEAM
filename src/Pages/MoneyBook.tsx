@@ -38,7 +38,7 @@ const MoneyBook: React.FC = () => {
         {/* 우측 내용 (내역 추가하기 부분) */}
         <div className='add-container'>
           <select name="add" id="" onChange={handleClick}>
-            <option value="">+ Enter consumption details</option>
+            <option value="">+ Enter details</option>
             <option value="moneyinput">write directly</option>
             <option value="photoinput">Input as image</option>
           </select>

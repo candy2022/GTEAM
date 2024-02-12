@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../Styles/WritePoststyle.css'; 
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const WritePost: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
@@ -33,7 +35,7 @@ const WritePost: React.FC = () => {
     <div className="write-post-container">
     <div className="button-container">
       <Link to="/board">
-        <button className='backbtn'>&lt;</button>
+        <button className='backbtn'> <FontAwesomeIcon icon={faChevronLeft} /> </button>
       </Link>
       <h2 style={{textAlign: "center"}}>write a post</h2>
 

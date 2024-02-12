@@ -51,14 +51,14 @@ const PieChartcomponent =() => {
     return (
       <div>
        
-      <ResponsiveContainer  width="100%" height={500} minWidth={300} minHeight={300} >
+      <ResponsiveContainer  width="100%" height={500}   >
         <PieChart >
-        <Legend  wrapperStyle={{ top: 0, left: 0, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '25px' }} />
+        <Legend  wrapperStyle={{ bottom:0, left: 0, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '25px' }} />
 
           <Pie
             data={finalData}
             cx="50%"
-            cy="50%"
+            cy="40%"
             labelLine={false}
             label={renderCustomizedLabel}
             outerRadius={150}
