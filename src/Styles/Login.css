@@ -36,7 +36,7 @@ article {
 .img2 {  display: flex;
     justify-content: center;
     align-items: center;
-    height: 65vh;
+    height:50vh;
     margin: auto;
  }
 .container {
@@ -85,7 +85,7 @@ article {
 .contactbox h3 span{
     color: gray;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     
     h1{
        font-size: 1.5em;
@@ -93,7 +93,7 @@ article {
     section {
       float: none;
       margin-left: 0;
-      border: 1px solid;
+      
     }
     article{
         width: 90%;

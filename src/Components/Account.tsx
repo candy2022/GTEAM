@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "../Styles/Accountstyle.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWallet,  faCommentDollar, faHome , faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-
+import {  faEnvelope  } from '@fortawesome/free-solid-svg-icons';
+ 
 interface UserInfo {
   email: string;
   name: string;
@@ -46,13 +45,15 @@ function Account() {
         <div className="nickinput" >{userInfo.email}</div> 
             <p>Managed by Google</p>
          </div>
-        <div className="LinkContainer">
-        <Link to="/dashboard"><FontAwesomeIcon icon={faHome} /> </Link>
-
-        <Link to="/moneybook"><FontAwesomeIcon icon={faWallet} /> </Link> 
-        <Link to="/board"><FontAwesomeIcon icon={faCommentDollar} /> </Link>
-         
-        </div>
+         <div className="AccountContainer">
+          <h3>Set a target spending amount for this month</h3>
+          <input type="text"  className="nickinput"/>
+          <h3>Make a pledge to keep your goal</h3>
+          <div className='textareaBox'>
+        <textarea id="myTextArea" placeholder=' ' />
+      </div>
+         </div>
+      
         <div className="AccountContainer">
         <h3>Delete account</h3> <button className="savebtn">Delete</button>
         </div>

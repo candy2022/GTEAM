@@ -3,13 +3,14 @@ import '../Styles/WritePoststyle.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import NavigationBar from "../Components/NavigationBar";
 
 const WritePost: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
 
-  const categories = ['질문', '일상', '소비차트공유'];
+  const categories = ['question', 'daily', 'Share chart'];
 
   const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCategory(event.target.value);
@@ -28,10 +29,46 @@ const WritePost: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    console.log('글쓰기 기능 추가');
-  };
+     const postId: string = new Date().getTime().toString();
+    const post: {
+      postId: string;
+      title: string;
+      selectedCategory: string;
+      content: string;
+      datePosted: string;
+    } = {
+      postId,
+      title,
+      selectedCategory,
+      content,
+      datePosted: new Date().toISOString(),
+    };
+  
+     const existingPosts: Array<{
+      postId: string;
+      title: string;
+      selectedCategory: string;
+      content: string;
+      datePosted: string;
+      // Add other fields accordingly
+    }> = JSON.parse(localStorage.getItem('posts') || '[]');
+  
+     existingPosts.push(post);
+  
+     localStorage.setItem('posts', JSON.stringify(existingPosts));
+  
+   };
+  
 
   return (
+    <div>
+      <NavigationBar menuItems={[
+        { name: 'Home', link: '/dashboard' },
+        { name: 'Community', link: '/board' },
+        { name: 'Moneybook', link: '/moneybook' },
+        { name: 'Mypage', link: '/mypage' },
+      ]} />
+
     <div className="write-post-container">
     <div className="button-container">
       <Link to="/board">
@@ -65,7 +102,7 @@ const WritePost: React.FC = () => {
         <button className="submitbtn" onClick={handleImageUpload}>upload photo</button>
       </div>
 
-      
+      </div>
     </div>
   );
 };

@@ -8,7 +8,10 @@ function MyPosts () {
         <h3>Posts</h3>
       </div>
       <div className='categorybox'>
-       &nbsp; <button className='postcategorybtn'>질문</button> <button className='postcategorybtn'>소비차트공유</button> <button className='postcategorybtn'>스터디</button>
+ 
+       &nbsp; <button className='postcategorybtn'>question</button>
+        <button className='postcategorybtn'>daily</button>
+         <button className='postcategorybtn'>Share chart</button>
       </div>
       <div className='postbox'>
         <p>You haven't posted anything <br />

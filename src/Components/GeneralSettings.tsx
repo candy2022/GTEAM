@@ -33,21 +33,23 @@ function GeneralSettings(){
         <br />
         <h2> <FontAwesomeIcon icon={faCommentDots} style={{fontSize: "2em"}} />  &nbsp;         
         Frequently Asked Questions</h2>
-          
-          <p  >
-          <hr />
+        <br /><hr />
+        <p>
+           
           <FontAwesomeIcon icon={faClipboardQuestion} style={{fontSize: "2em"}} />  &nbsp;
 
           Is my data secure? <br />  <br />
           Absolutely. We prioritize the security and privacy of your data. 
-            All your financial information is encrypted and stored securely. 
-          <br /><hr />
+            All your financial information is encrypted and stored securely. </p>
+          <hr />
+          <p>
+           
           <FontAwesomeIcon icon={faClipboardQuestion} style={{fontSize: "2em"}} />  &nbsp;
 
             Can I access the Financial Tracker on my mobile device? <br /><br />
             Yes, the Financial Tracker is available on both desktop and mobile devices.
            You can track your finances anytime, anywhere. 
-          <hr />
+           
           </p>
           <br />
         </div>

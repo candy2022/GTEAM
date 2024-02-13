@@ -7,7 +7,14 @@ import { faMagnifyingGlass, faPencilAlt } from '@fortawesome/free-solid-svg-icon
 import { Link } from 'react-router-dom';
 
 const Board: React.FC = () => {   
- 
+   const storedPosts: Array<{
+    postId: string;
+    title: string;
+    author: string;
+    datePosted: string;
+    // Add other fields accordingly
+  }> = JSON.parse(localStorage.getItem('posts') || '[]');
+
   return (
     <div>    
       <NavigationBar
@@ -21,9 +28,9 @@ const Board: React.FC = () => {
       <div>    
       
       <div className='boardContainer'>
-      <div className='mypageheader'>
-        <h3>Ask and answer together. </h3>
-         <p style={{color:"darkblue"}}> Let's discuss in the community..</p>
+      <div className='mypageheader1'>
+        <h3 style={{fontSize: "2em"}}>Ask and answer together. </h3>
+         <p style={{color:"darkblue"}}> Let's discuss in the community...</p>
       </div>
       <div className='boardcontent'>      
       <div className='comcontainer'> 
@@ -42,31 +49,24 @@ const Board: React.FC = () => {
       </div>
       <hr />
       <table>
+      <thead>
         <tr>
           <th>PostId</th><th>Title</th><th>Author</th><th>DatePosted</th><th>Views</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Sample Post 1</td>
-            <td>John Doe</td>
-            <td>2024-02-05</td>
-            <td>150</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Sample Post 2</td>
-            <td>Jane Smith</td>
-            <td>2024-02-06</td>
-            <td>220</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Sample Post 3</td>
-            <td>Bob Johnson</td>
-            <td>2024-02-07</td>
-            <td>180</td>
-        </tr>
-      </table>
+      </thead>
+      <tbody>
+        {storedPosts.map((post) => (
+          <tr key={post.postId}>
+            <td>{post.postId}</td>
+            <td>{post.title}</td>
+            {/* Include other fields accordingly */}
+            <td>{post.author}</td>
+            <td>{post.datePosted}</td>
+            <td>{/* Add views or any other relevant data */}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
       </div>
       </div>
       

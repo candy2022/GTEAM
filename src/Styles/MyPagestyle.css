@@ -2,6 +2,7 @@
     width: 20vw;
     height: 100vh;
     padding: 10px;     
+    background-color:  rgba(132, 164, 246, 0.26);
 }  
 
 .mybtn {
@@ -16,7 +17,7 @@
     border: 1px solid lightgray;
 }
 .mybtn:hover{  
-   background-color: #eee;
+   background-color: rgba(132, 164, 246, 0.26);
 }
 .categorybox{
     border: 1px solid lightgray;
@@ -37,10 +38,10 @@
     overflow-x: hidden;  
 }
 .mypageheader{
-    background-color: rgba(132, 164, 246, 0.26);
     color: darkblue;
-    padding: 1vh;
+    border-bottom: 2px solid ;
     width: 100vw;
+    font-size: 2em;
 }
 .postcategorybtn{
     background-color: #fff;
@@ -72,20 +73,57 @@
     display: none;
     z-index: 10;
   }
- 
+@media (max-width: 700px) {
+    .myaside {
+        width: 100%;
+        height: auto;
+        position: static;     
+        background-color: aliceblue;     
+        transition: transform 0.3s ease;  
+        transform: translateX(0); 
+        z-index: 2;
+    }
+    .myaside.hidden {
+        transform: translateX(-100%);  
+    }
+    .toggle-btn {
+        display: block;
+        background-color: #fff;
+        z-index: 10;
+        border: none;
+        transform: translateX(14vw);
+        position: absolute;
+        top: 14vh;
+        left: 10vw;
+        transition: transform 0.3s ease; 
+    }
+    .toggle-btn.hidden{
+        transform: translateX(-10vw); 
+        
+    }   
+    .mycon {
+        flex: 1;
+        padding: 10px;
+        transition: transform 0.3s ease;  
+        transform: translateX(0); 
+        transform: translateX(-20vw);
+        z-index: 1;
+       
+    }
+}
   @media (max-width: 414px) {
     .myaside {
         width: 100%;
         height: auto;
         position: static;     
-        background-color: #fff;     
+        background-color: aliceblue;     
         transition: transform 0.3s ease;  
         transform: translateX(0); 
         z-index: 2;
       }
     .myaside.hidden {
           transform: translateX(-100%);  
-        }
+    }
       
     .toggle-btn {
         display: block;
@@ -109,6 +147,7 @@
         transform: translateX(0); 
         transform: translateX(-35vw);
         z-index: 1;
-      }
+       
+    }
       
   }

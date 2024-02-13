@@ -57,16 +57,19 @@ td, th {
     padding: 8px;
     text-align: left;
 }
-
-tr:nth-child(even) {
-    background-color:rgba(132, 164, 246, 0.132);
-}
+ 
 
 th {
     background-color: #555;
     color: white;
     border: none;
  }
+.mypageheader1{
+    color: darkblue;
+    border-bottom: 2px solid ;
+    width: 100vw;
+    
+}
 @media only screen and (max-width: 400px) {
     .search{
         width: 70%;

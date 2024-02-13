@@ -18,7 +18,11 @@ const TransactionInput: React.FC<MoneyInputProps> = ({ type, onTransactionSubmit
 
   const handleTransactionSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    if (!date || !detail || !category || !amount) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+  
     const newMoney: Money = {
       id: Date.now(),
       type,
@@ -69,8 +73,15 @@ const TransactionInput: React.FC<MoneyInputProps> = ({ type, onTransactionSubmit
               {type === "expense" ? (
                 <>
                   <option value="food">Food</option>
+                  <option value="housing">Housing</option>
                   <option value="clothing">Clothing</option>
+                  <option value="transportation">Transportation</option>
+                  <option value="household Goods">Household Goods</option>
+                  <option value="medical Expenses">Medical Expenses</option>
+                  <option value="education">Education</option>
                   <option value="entertainment">Entertainment</option>
+                  <option value="others">Others</option>
+
                 </>
               ) : (
                 <>
@@ -94,7 +105,9 @@ const TransactionInput: React.FC<MoneyInputProps> = ({ type, onTransactionSubmit
           <br />
           
           <br />
-          <button className="savebtn" type="submit">
+          <button  className={`savebtn ${(!date || !detail || !category || !amount) ? 'disabled' : ''}`}
+
+           type="submit" disabled={!date || !detail || !category || !amount}>
             Submit
           </button>
         </form>

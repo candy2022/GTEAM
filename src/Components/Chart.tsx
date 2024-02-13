@@ -9,8 +9,11 @@ function Chart() {
         <h3>Chart</h3>
       </div>
       <div >
-        <h2 style={{textAlign: "center"}}> Check out this month's  chart!  </h2>
-        <div className="pieContainer" >
+      <p>
+            To view detailed reports or explore more features, head to the{' '}
+            <a href="/dashboard">Dashboard</a> page.
+          </p>
+         <div className="pieContainer" >
           <PieChartComponent />
         </div>
         <div>
@@ -24,10 +27,7 @@ function Chart() {
             this information to make informed decisions and achieve your
             financial goals.
           </p>
-          <p>
-            To view detailed reports or explore more features, head to the{' '}
-            <a href="/dashboard">Dashboard</a> page.
-          </p>
+          
         </div>        
       </div>
       

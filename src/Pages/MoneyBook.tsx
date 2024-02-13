@@ -44,7 +44,7 @@ const MoneyBook: React.FC = () => {
           </select>
         </div>
       </div>
-      <hr />
+     
       <div className='historyContainer'>
         <MoneyHistory moneys={moneys} />
       </div>
