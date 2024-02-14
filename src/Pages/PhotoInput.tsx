@@ -27,6 +27,7 @@ function PhotoiInput(){
         <p>Select a photo file and AI will automatically enter it into your consumption history.</p>
         <br />
         <input type="file" id="fileInput" />
+         
         <button className='savebtn' onClick={handleFileUpload}>file upload</button>
         </div>
         <div className='sulmung'>

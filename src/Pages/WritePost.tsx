@@ -120,7 +120,8 @@ const WritePost: React.FC = () => {
          value={content} onChange={handleContentChange} />
       </div>
 
-      
+      <input  type="file" id="fileInput" />
+      <br />
         <button className="submitbtn" onClick={handleImageUpload}>upload photo</button>
       
 
