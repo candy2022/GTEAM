@@ -10,6 +10,7 @@ import MoneyBook from './Pages/MoneyBook';
 import PhotoiInput from './Pages/PhotoInput';
 import Board from './Pages/Board';
 import WritePost from './Pages/WritePost';
+import PostDetail from './Pages/PostDetail';
 
 function App() { 
 
@@ -27,6 +28,7 @@ function App() {
       <Route path={"/moneybook"} element={<MoneyBook />}></Route> 
       <Route path={"/board"} element={<Board />}></Route> 
       <Route path={"board/writepost"} element={<WritePost />}></Route> 
+      <Route path={"board/:postId"} element={<PostDetail />}></Route> 
 
      </Routes>          
    </BrowserRouter>

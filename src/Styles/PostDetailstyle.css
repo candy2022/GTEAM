@@ -1,0 +1,39 @@
+.pdContainer{
+    margin-top: 13vh;
+    padding: 5%;
+     
+ }
+.pdPicture{
+    display: flex;
+    align-items: center;
+    padding: 3vh 0;
+}
+.postContent{
+    margin: 3vh 0; 
+    padding: 3vh 0;
+}
+.delbtn{
+    float: right;
+    background-color: rgb(96, 96, 238);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    padding: 2%;
+
+}
+.delbtn:hover{
+    cursor: pointer;
+}
+.listbtn{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    padding: 2%;
+    width: 30%;
+    background-color: #555;
+}
+.listbtn:hover{
+    cursor: pointer;
+}

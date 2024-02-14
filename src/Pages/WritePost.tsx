@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import '../Styles/WritePoststyle.css'; 
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import NavigationBar from "../Components/NavigationBar";
 
 const WritePost: React.FC = () => {
+  const navigate = useNavigate();  
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [title, setTitle] = useState<string>('');
   const [content, setContent] = useState<string>('');
+  const storedName = sessionStorage.getItem('name');
+  const storedPicture = sessionStorage.getItem('picture');
 
   const categories = ['question', 'daily', 'Share chart'];
 
@@ -29,34 +32,53 @@ const WritePost: React.FC = () => {
   };
 
   const handleSubmit = () => {
+    if (!selectedCategory || !title || !content) {
+      alert('모든 필드를 채워주세요.');
+      return;  
+    }
+
      const postId: string = new Date().getTime().toString();
+     const formattedDate = new Date().toISOString().slice(0, 10);
+
     const post: {
       postId: string;
       title: string;
+      author: string;
       selectedCategory: string;
       content: string;
       datePosted: string;
+      authorPicture: string;
     } = {
       postId,
       title,
+      author: storedName || 'Anonymous',
       selectedCategory,
       content,
-      datePosted: new Date().toISOString(),
+      datePosted: formattedDate,
+      authorPicture: storedPicture || 'NOPicture',
     };
   
      const existingPosts: Array<{
       postId: string;
       title: string;
+      author: string;
       selectedCategory: string;
       content: string;
       datePosted: string;
+      authorPicture: string;
       // Add other fields accordingly
     }> = JSON.parse(localStorage.getItem('posts') || '[]');
   
      existingPosts.push(post);
   
      localStorage.setItem('posts', JSON.stringify(existingPosts));
-  
+     const confirmation = window.confirm('제출되었습니다. 확인을 누르면 게시판으로 이동합니다.');
+    
+     if (confirmation) {
+      navigate('/board');
+
+    }
+
    };
   
 
@@ -98,9 +120,9 @@ const WritePost: React.FC = () => {
          value={content} onChange={handleContentChange} />
       </div>
 
-      <div>
+      
         <button className="submitbtn" onClick={handleImageUpload}>upload photo</button>
-      </div>
+      
 
       </div>
     </div>

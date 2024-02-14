@@ -1,9 +1,8 @@
-import React from 'react';
 import NavigationBar from "../Components/NavigationBar";
 import Footer from "../Components/Footer";
 import "../Styles/Boardstyle.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faPencilAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faPencilAlt, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Board: React.FC = () => {   
@@ -14,7 +13,13 @@ const Board: React.FC = () => {
     datePosted: string;
     // Add other fields accordingly
   }> = JSON.parse(localStorage.getItem('posts') || '[]');
-
+  const truncateTitle = (title: string, maxLength = 35) => {
+    if (title.length <= maxLength) {
+      return title;
+    } else {
+      return `${title.substring(0, maxLength)}...`;
+    }
+  };
   return (
     <div>    
       <NavigationBar
@@ -51,20 +56,29 @@ const Board: React.FC = () => {
       <table>
       <thead>
         <tr>
-          <th>PostId</th><th>Title</th><th>Author</th><th>DatePosted</th><th>Views</th>
+        <th>DatePosted</th><th>Title</th><th>Author</th><th>Views</th>
         </tr>
       </thead>
       <tbody>
-        {storedPosts.map((post) => (
-          <tr key={post.postId}>
-            <td>{post.postId}</td>
-            <td>{post.title}</td>
-            {/* Include other fields accordingly */}
-            <td>{post.author}</td>
-            <td>{post.datePosted}</td>
-            <td>{/* Add views or any other relevant data */}</td>
-          </tr>
-        ))}
+      {storedPosts.map((post) => (
+      <tr key={post.postId}>
+        <td>
+          <Link to={`/board/${post.postId}`}>{post.datePosted}</Link>
+        </td>
+        <td>
+          <Link to={`/board/${post.postId}`}>
+          {truncateTitle(post.title)}</Link>
+        </td>
+        <td>
+          <Link to={`/board/${post.postId}`}>{post.author}</Link>
+        </td>
+        <td style={{ color: "#5931eb9c" }}>
+          <Link to={`/board/${post.postId}`}>
+            <FontAwesomeIcon icon={faHeart} />
+          </Link>
+        </td>
+      </tr>
+    ))}
       </tbody>
     </table>
       </div>

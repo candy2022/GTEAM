@@ -13,7 +13,7 @@ function Googlebtn() {
    const navigate = useNavigate();  
    const handleGoogleLogin = (credentialResponse: CredentialResponse) => {
     const userObj = jwtDecode(credentialResponse.credential as string) as UserInfo;
-    console.log(userObj);
+    //console.log(userObj);
     // 세션 스토리지에 로그인 정보 저장
     sessionStorage.setItem('email', userObj.email);
     sessionStorage.setItem('name', userObj.name);

@@ -26,7 +26,11 @@ function Login(){
              and achieve a better financial status
             
            </h1>
-           <h3 style={{color: "#555"}}>            
+            
+            <Googlebtn />
+
+            <img className="img1" src="/src/assets/mainimg1.png" alt="img" />
+            <h3 style={{color: "#555"}}>            
             Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
             We are here to assist you in experiencing a more joyful financial state.  
@@ -35,11 +39,7 @@ function Login(){
             Your success is our priority,
             and we're dedicated to supporting you every step of the way.
 
-            </h3> 
-            <Googlebtn />
-
-            <img className="img1" src="/src/assets/mainimg1.png" alt="img" />
-
+            </h3>
             </article>
         <article id="about">
           <br />
