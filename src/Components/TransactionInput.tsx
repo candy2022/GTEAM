@@ -105,7 +105,7 @@ const TransactionInput: React.FC<MoneyInputProps> = ({ type, onTransactionSubmit
           <br />
           
           <br />
-          <button  className={`savebtn ${(!date || !detail || !category || !amount) ? 'disabled' : ''}`}
+          <button  className={`savebtn2 ${(!date || !detail || !category || !amount) ? 'disabled' : ''}`}
 
            type="submit" disabled={!date || !detail || !category || !amount}>
             Submit

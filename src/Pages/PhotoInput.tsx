@@ -3,6 +3,10 @@ import NavigationBar from "../Components/NavigationBar";
 import "../Styles/inputstyle.css";
 
 function PhotoiInput(){
+  const handleFileUpload = () => {
+     console.log("파일 업로드")
+ };
+
     return(
         <div >
         <NavigationBar
@@ -22,7 +26,8 @@ function PhotoiInput(){
 
         <p>Select a photo file and AI will automatically enter it into your consumption history.</p>
         <br />
-        <button className='savebtn'>file upload</button>
+        <input type="file" id="fileInput" />
+        <button className='savebtn' onClick={handleFileUpload}>file upload</button>
         </div>
         <div className='sulmung'>
         <p>Your files are secure on NeatFin servers and will be deleted if you do not save them. <br />

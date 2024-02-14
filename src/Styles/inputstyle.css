@@ -73,7 +73,7 @@
 }
   
 .moneyContainer {
-    width: 60vw;
+    width: 40vw;
     margin: 0 auto;
     padding: 3vh 20vw;
     
@@ -93,13 +93,33 @@
     background-color: lightgray; 
     color: white;  
   }
-.savebtn.disabled {
+.savebtn2{
+    padding:2vh 10vw; 
+    border: none;
+    background-color: #555;
+    color: #fff;
+    font-weight: bold;
+    margin: 2vh 0;
+     
+}
+.savebtn2:hover{
+    cursor: pointer;
+}
+.savebtn2.disabled {
     background-color: #cccccc;  
     cursor: not-allowed; /* 마우스 커서를 비활성화된 상태로 변경 */
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 900px) {
+    .moneyContainer{
+        width: 50vw;
+    }
+}
+@media only screen and (max-width: 500px) {
     .uploadbox{
         font-size: small;        
     
+    }
+    .moneyContainer{
+        width: 60vw;
     }
 }
